@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../components/Footer';
 
 const partners = [
   {name:'Institute A'}, {name:'Lab B'}, {name:'Company C'}
@@ -6,11 +7,15 @@ const partners = [
 
 export default function Partners(){
   return (
-    <div>
-      <h2 className="text-2xl font-semibold">Partners</h2>
-      <div className="mt-4 grid md:grid-cols-3 gap-4">
-        {partners.map((p,i)=>(<div key={i} className="tech-card text-center">{p.name}</div>))}
+    <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#9ec5c6' }}>
+      <div className="flex-grow py-12 px-8">
+        <h2 className="text-2xl font-semibold">Partners</h2>
+        <div className="mt-4 grid md:grid-cols-3 gap-4">
+          {partners.map((p,i)=>(<div key={i} className="tech-card text-center">{p.name}</div>))}
+        </div>
       </div>
+      
+      <Footer />
     </div>
   )
 }

@@ -1,41 +1,63 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import logo from '/Users/lazypilot/Desktop/Lazypilot/IIT Bhilai/deciphered/Workshop_Website/frontend/assets/logo.png';
+import decipheredLogo from '/Users/lazypilot/Desktop/Lazypilot/IIT Bhilai/deciphered/Workshop_Website/frontend/assets/deciphered_logo.jpg';
+import iitBhilaiLogo from '/Users/lazypilot/Desktop/Lazypilot/IIT Bhilai/deciphered/Workshop_Website/frontend/assets/IIT_Bhilai_Logo.svg';
 
 export default function Header() {
   return (
     <header className="w-full bg-[#9ec5c6] border-b border-[#2e2a30]/20 shadow-sm">
-      {/* Top Section: Logo + Title */}
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center gap-4">
-        <img
-          src={logo}
-          alt="Workshop Logo"
-          className="w-12 h-12 object-contain"
-        />
-        <h1 className="text-xl md:text-2xl font-extrabold tracking-widest bg-gradient-to-r from-[#7c3aed] to-[#ec4899] bg-clip-text text-transparent">
-          National Workshop on Cryptology 2025
-        </h1>
-      </div>
-
-      {/* Navigation Bar */}
-      <nav className="max-w-7xl mx-auto px-6 pb-4 flex flex-wrap gap-6 text-sm font-medium text-[#2e2a30]">
-        {[
-          { label: 'Program', path: '/program' },
-          { label: 'Registration', path: '/registration' },
-          { label: 'Travel', path: '/travel' },
-          { label: 'About', path: '/general/about' },
-          { label: 'Sponsors', path: '/sponsors' },
-        ].map((link, i) => (
-          <Link
-            key={i}
-            to={link.path}
-            className="relative group hover:text-[#2e2a30] transition duration-300"
+      {/* Logo + Title + Right Logos */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-1.5 sm:py-2 lg:py-2.5 flex items-center justify-between gap-2 sm:gap-3">
+        {/* Left: Main Logo + Title */}
+        <div className="flex items-center gap-2 sm:gap-3 lg:gap-4">
+          <a 
+            href="https://crsind.in/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="transition-transform duration-300 hover:scale-110"
           >
-            {link.label}
-            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#2e2a30] transition-all duration-300 group-hover:w-full"></span>
-          </Link>
-        ))}
-      </nav>
+            <img
+              src={logo}
+              alt="Workshop Logo"
+              className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 object-contain cursor-pointer"
+            />
+          </a>
+          <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-extrabold tracking-wide sm:tracking-wider bg-gradient-to-r from-[#7c3aed] to-[#ec4899] bg-clip-text text-transparent leading-tight">
+            National Workshop on Cryptology 2025
+          </h1>
+        </div>
+
+        {/* Right: Partner/Sponsor Logos */}
+        <div className="flex items-center gap-2 sm:gap-3 lg:gap-4">
+          {/* Deciphered Logo */}
+          <a 
+            href="http://de.ci.phe.red/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full flex items-center justify-center bg-white/70 transition-all duration-300 hover:scale-110 shadow-md p-1"
+          >
+            <img 
+              src={decipheredLogo} 
+              alt="Deciphered Logo" 
+              className="w-full h-full object-contain rounded-full cursor-pointer"
+            />
+          </a>
+          
+          {/* IIT Bhilai Logo */}
+          <a 
+            href="https://www.iitbhilai.ac.in/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full flex items-center justify-center bg-white/70 transition-all duration-300 hover:scale-110 shadow-md p-1"
+          >
+            <img 
+              src={iitBhilaiLogo} 
+              alt="IIT Bhilai Logo" 
+              className="w-full h-full object-contain rounded-full cursor-pointer"
+            />
+          </a>
+        </div>
+      </div>
     </header>
   );
 }
