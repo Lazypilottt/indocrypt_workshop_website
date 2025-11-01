@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import header from './components/header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import RegistrationHome from './pages/Registration/RegistrationHome';
@@ -22,6 +23,7 @@ export default function App(){
   return (
     <Router>
       <div className="min-h-screen flex flex-col relative overflow-hidden">
+        <header />
         <EccentricBackground />
         <Navbar />
         <main className="flex-grow container mx-auto px-6 py-12">

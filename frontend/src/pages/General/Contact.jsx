@@ -5,7 +5,7 @@ export default function Contact(){
     <div>
       <h2 className="text-2xl font-semibold">Contact</h2>
       <div className="mt-4 tech-card">
-        <p>Organizers: info@indocrypt2025.in</p>
+        <p>Contact sample num</p>
       </div>
     </div>
   )
