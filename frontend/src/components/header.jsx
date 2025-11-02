@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from '/Users/lazypilot/Desktop/Lazypilot/IIT Bhilai/deciphered/Workshop_Website/frontend/assets/logo.png';
-import decipheredLogo from '/Users/lazypilot/Desktop/Lazypilot/IIT Bhilai/deciphered/Workshop_Website/frontend/assets/deciphered_logo.jpg';
-import iitBhilaiLogo from '/Users/lazypilot/Desktop/Lazypilot/IIT Bhilai/deciphered/Workshop_Website/frontend/assets/IIT_Bhilai_Logo.svg';
+import logo from '../../assets/logo.png';
+import decipheredLogo from '../../assets/deciphered_logo.jpg';
+import iitBhilaiLogo from '../../assets/IIT_Bhilai_Logo.svg';
 
 export default function Header() {
   return (
