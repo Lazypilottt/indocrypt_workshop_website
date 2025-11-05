@@ -25,10 +25,10 @@ const Home = () => {
       >
         <div
           className="relative max-w-4xl w-full mx-6 px-12 py-14 rounded-[32px] 
-          bg-white/20 backdrop-blur-xl border border-white/30 
-          shadow-[0_20px_60px_rgba(0,0,0,0.2)] text-center
-          hover:shadow-[0_30px_80px_rgba(0,0,0,0.25)] transition-all duration-500
-          hover:scale-[1.02] hover:bg-white/25
+          bg-white border border-[#2e2a30]/20 
+          shadow-[0_20px_60px_rgba(0,0,0,0.15)] text-center
+          hover:shadow-[0_30px_80px_rgba(0,0,0,0.2)] transition-all duration-500
+          hover:scale-[1.02]
           animate-float"
         >
           <h1 className="text-5xl md:text-7xl font-bold text-grey mb-6 tracking-tight leading-tight
@@ -82,9 +82,9 @@ const Home = () => {
           </h2>
         </div>
         
-        <div className="bg-white/30 backdrop-blur-xl border border-white/40 rounded-3xl p-8 md:p-12 
-                        shadow-[0_20px_60px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_70px_rgba(0,0,0,0.2)]
-                        transition-all duration-500 hover:scale-[1.02] hover:bg-white/35">
+        <div className="bg-white border border-[#2e2a30]/20 rounded-3xl p-8 md:p-12 
+                        shadow-[0_20px_60px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_70px_rgba(0,0,0,0.15)]
+                        transition-all duration-500 hover:scale-[1.02]">
           
           <div className="space-y-6 text-[#2e2a30]/90 leading-relaxed">
             <p className="text-lg first-letter:text-5xl first-letter:font-bold first-letter:text-[#2e2a30] 
@@ -207,9 +207,9 @@ const Home = () => {
               data-aos="zoom-in-up"
               data-aos-delay={i * 100}
               data-aos-duration="1200"
-              className="p-6 bg-white/30 border border-white/40 rounded-xl backdrop-blur-md text-center text-[#2e2a30]
-                       transition-all duration-700 hover:scale-125 hover:bg-white/50 hover:shadow-2xl
-                       hover:-translate-y-4 hover:border-white/80 cursor-pointer group hover:rotate-3
+              className="p-6 bg-white border border-[#2e2a30]/20 rounded-xl text-center text-[#2e2a30]
+                       transition-all duration-700 hover:scale-125 hover:shadow-2xl
+                       hover:-translate-y-4 hover:border-[#2e2a30]/40 cursor-pointer group hover:rotate-3
                        transform animate-float"
               style={{ animationDelay: `${i * 0.2}s` }}
             >
@@ -256,8 +256,8 @@ const Home = () => {
 
       {/* ================= FOOTER ================= */}
       <footer data-aos="fade-up" data-aos-duration="800" 
-              className="w-full py-6 border-t border-white/20 bg-[#2e2a30]/10 backdrop-blur-sm mt-12
-                       hover:bg-[#2e2a30]/15 transition-all duration-300">
+              className="w-full py-6 border-t border-[#2e2a30]/20 bg-white mt-12
+                       hover:shadow-lg transition-all duration-300">
         <div className="max-w-7xl mx-auto px-8 text-center text-sm text-[#2e2a30]">
           <p className="font-medium hover:scale-105 transition-transform duration-300 inline-block cursor-default">
             © 2025 National Workshop on Cryptology · IIT Bhilai
