@@ -45,7 +45,7 @@ export default function RegistrationHome() {
 
             <div className="py-8">
               <a
-                href="https://forms.google.com/"
+                href="https://forms.gle/RExqYDbqCN2fBJWE7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-12 py-4 rounded-full font-bold text-lg text-white 
