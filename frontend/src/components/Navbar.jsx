@@ -6,10 +6,10 @@ export default function Navbar() {
 
   return (
     <nav className="w-full bg-[#a5b4fc] border border-[#2e2a30]/20 shadow-lg rounded-[24px] mx-auto max-w-[80%] my-2">
-      <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-center">
+      <div className="max-w-7xl mx-auto px-6 py-1.5 flex items-center justify-center">
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-10 items-center text-base font-medium text-[#2e2a30]">
+        <div className="hidden md:flex gap-10 items-center text-sm font-medium text-[#2e2a30]">
           {[
             { label: 'Home', path: '/' },
             { label: 'Program', path: '/program' },
