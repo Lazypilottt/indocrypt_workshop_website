@@ -59,9 +59,10 @@ const Home = () => {
             </Link>
             <Link
               to="/program"
-              className="px-7 py-3 rounded-full border border-white/40 text-white/90 hover:text-white 
-              hover:border-white transition-all duration-300 hover:scale-110 hover:shadow-xl
-              hover:-translate-y-1 active:scale-95 hover:bg-white/10"
+              className="px-7 py-3 rounded-full font-medium text-[#2e2a30] shadow-md 
+              transition-all duration-300 hover:scale-110 hover:shadow-xl
+              hover:-translate-y-1 active:scale-95"
+              style={{ backgroundColor: "#a5b4fc" }}
             >
               Program
             </Link>
