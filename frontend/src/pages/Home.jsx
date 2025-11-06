@@ -4,6 +4,18 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
+// Speaker images
+import shimanImg from "../../assets/speakers/shiman.png";
+import mostafizarImg from "../../assets/speakers/Mostafizar.jpg";
+import angshumanImg from "../../assets/speakers/angshuman.jpg";
+import satrajitImg from "../../assets/speakers/satrajit.jpg";
+import sabyasachiImg from "../../assets/speakers/sabyacachi.jpg";
+import aninditaImg from "../../assets/speakers/anindita.jpg";
+import avijitImg from "../../assets/speakers/avijit.jpg";
+import avikImg from "../../assets/speakers/avik.jpg";
+import dipanwitaImg from "../../assets/speakers/Dipanwita.jpg";
+import mridulImg from "../../assets/speakers/mridul_nandi.jpg";
+
 
 const Home = () => {
   useEffect(() => {
@@ -151,16 +163,16 @@ const Home = () => {
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 justify-center">
           {[
-            { name: "Dr. Shibam Ghosh", expertise: "Symmetric Key Cryptanalysis", university: "INRIA" },
-            { name: "Dr. Mostafizar Rahman", expertise: "Symmetric Key Cryptanalysis", university: "NTU Singapore" },
-            { name: "Dr. Angshuman Karmakar", expertise: "Post Quantum Cryptography", university: "IIT Kanpur" },
-            { name: "Dr. Satrajit Ghosh", expertise: "Multi-Party Computation", university: "IIT Kharagpur" },
-            { name: "Dr. Sabyasachi Karati", expertise: "Public Key Cryptography", university: "ISI Kolkata" },
-            { name: "Dr. Anindita Banerjee", expertise: "Quantum Communication", university: "CDAC Pune" },
-            { name: "Dr. Avijit Dutta", expertise: "Provable Security", university: "TCG Crest" },
-            { name: "Dr. Avik Chakraborti", expertise: "White Box Cryptography", university: "TCG Crest" },
-            { name: "Prof. Dipanwita Roy Chowdhury", expertise: "Symmetric Key Cryptography", university: "IIT Kharagpur" },
-            { name: "Prof. Mridul Nandi", expertise: "Provable Security", university: "ISI Kolkata" },
+            { name: "Dr. Shibam Ghosh", expertise: "Symmetric Key Cryptanalysis", university: "INRIA", image: shimanImg },
+            { name: "Dr. Mostafizar Rahman", expertise: "Symmetric Key Cryptanalysis", university: "NTU Singapore", image: mostafizarImg },
+            { name: "Dr. Angshuman Karmakar", expertise: "Post Quantum Cryptography", university: "IIT Kanpur", image: angshumanImg },
+            { name: "Dr. Satrajit Ghosh", expertise: "Multi-Party Computation", university: "IIT Kharagpur", image: satrajitImg },
+            { name: "Dr. Sabyasachi Karati", expertise: "Public Key Cryptography", university: "ISI Kolkata", image: sabyasachiImg },
+            { name: "Dr. Anindita Banerjee", expertise: "Quantum Communication", university: "CDAC Pune", image: aninditaImg },
+            { name: "Dr. Avijit Dutta", expertise: "Provable Security", university: "TCG Crest", image: avijitImg },
+            { name: "Dr. Avik Chakraborti", expertise: "White Box Cryptography", university: "TCG Crest", image: avikImg },
+            { name: "Prof. Dipanwita Roy Chowdhury", expertise: "Symmetric Key Cryptography", university: "IIT Kharagpur", image: dipanwitaImg },
+            { name: "Prof. Mridul Nandi", expertise: "Provable Security", university: "ISI Kolkata", image: mridulImg },
           ].map((speaker, i) => (
             <div key={i} 
                  className="flex flex-col items-center text-[#2e2a30] group cursor-pointer
@@ -173,7 +185,7 @@ const Home = () => {
                             transition-all duration-700 group-hover:scale-125 group-hover:shadow-2xl 
                             group-hover:border-white/70 group-hover:bg-white/60 group-hover:-translate-y-4
                             group-hover:rotate-12 animate-pulse-slow">
-                {/* You can insert <img src="..." alt="..." className="w-full h-full object-cover" /> here later */}
+                <img src={speaker.image} alt={speaker.name} className="w-full h-full object-cover" />
               </div>
               <h3 className="text-lg font-semibold group-hover:text-[#2e2a30] transition-all duration-700 
                            group-hover:scale-125 group-hover:font-bold">{speaker.name}</h3>
