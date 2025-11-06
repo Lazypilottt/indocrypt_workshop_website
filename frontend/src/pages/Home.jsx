@@ -210,15 +210,14 @@ const Home = () => {
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            "Symmetric & Asymmetric Cryptography",
-            "Blockchain Security",
-            "Quantum-Safe Cryptography",
-            "Cryptanalysis Techniques",
-            "Zero-Knowledge Proofs",
-            "Secure Multi-Party Computation",
-            "Hash Functions & Digital Signatures",
-            "Cryptographic Protocols",
-            "Side-Channel Attacks"
+            "Symmetric Key Cryptanalysis",
+            "Post Quantum Cryptography",
+            "Multi-Party Computation",
+            "Public Key Cryptography",
+            "Quantum Communication",
+            "Provable Security",
+            "White Box Cryptography",
+            "Symmetric Key Cryptography"
           ].map((topic, i) => (
             <div
               key={i}
