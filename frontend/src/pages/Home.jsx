@@ -150,12 +150,16 @@ const Home = () => {
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 justify-center">
           {[
-            { name: "Dr. Dhiman Saha", university: "IIT Bhilai" },
-            { name: "Mr. Soumen Jana ", university: "IIT Bhilai" },
-            { name: "Mr. Robot ", university: "IIT Bhilai" },
-            { name: "Mr. Donald Trump ", university: "IIT Bhilai" },
-            { name: "Mr. Micheal Scott ", university: "IIT Bhilai" },
-            { name: "Miss Isha Goel", university: "DU MA Psychology" },
+            { name: "Dr. Shibam Ghosh", expertise: "Symmetric Key Cryptanalysis", university: "INRIA" },
+            { name: "Dr. Mostafizar Rahman", expertise: "Symmetric Key Cryptanalysis", university: "NTU Singapore" },
+            { name: "Dr. Angshuman Karmakar", expertise: "Post Quantum Cryptography", university: "IIT Kanpur" },
+            { name: "Dr. Satrajit Ghosh", expertise: "Multi-Party Computation", university: "IIT Kharagpur" },
+            { name: "Dr. Sabyasachi Karati", expertise: "Public Key Cryptography", university: "ISI Kolkata" },
+            { name: "Dr. Anindita Banerjee", expertise: "Quantum Communication", university: "CDAC Pune" },
+            { name: "Dr. Avijit Dutta", expertise: "Provable Security", university: "TCG Crest" },
+            { name: "Dr. Avik Chakraborti", expertise: "White Box Cryptography", university: "TCG Crest" },
+            { name: "Prof. Dipanwita Roy Chowdhury", expertise: "Symmetric Key Cryptography", university: "IIT Kharagpur" },
+            { name: "Prof. Mridul Nandi", expertise: "Provable Security", university: "ISI Kolkata" },
           ].map((speaker, i) => (
             <div key={i} 
                  className="flex flex-col items-center text-[#2e2a30] group cursor-pointer
@@ -172,6 +176,7 @@ const Home = () => {
               </div>
               <h3 className="text-lg font-semibold group-hover:text-[#2e2a30] transition-all duration-700 
                            group-hover:scale-125 group-hover:font-bold">{speaker.name}</h3>
+              <p className="text-sm font-medium text-[#7c3aed] opacity-90 group-hover:opacity-100 transition-all duration-700">{speaker.expertise}</p>
               <p className="text-sm opacity-80 group-hover:opacity-100 transition-all duration-700 group-hover:scale-110">{speaker.university}</p>
             </div>
           ))}
