@@ -10,43 +10,37 @@ import CodeOfConduct from './pages/Registration/CodeOfConduct';
 import Program from './pages/Program';
 import TravelHome from './pages/Travel/TravelHome';
 import Venue from './pages/Travel/Venue';
-import Accommodation from './pages/Travel/Accommodation';
-import Places from './pages/Travel/Places';
-import About from './pages/General/About';
-import Contact from './pages/General/Contact';
-import FAQ from './pages/General/FAQ';
-import Partners from './pages/General/Partners';
 import Sponsors from './pages/Sponsors';
-import EccentricBackground from './components/EccentricBackground';
+import ErrorPage from './pages/ErrorPage';
+import BackgroundCarousel from './components/BackgroundCarousel';
 
 export default function App(){ 
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen flex flex-col relative">
-        <div className="sticky top-0 z-50">
+      <div className="min-h-screen flex flex-col relative overflow-hidden">
+        <div className="fixed top-0 left-0 right-0 z-50 w-full">
           <Header />
           <Navbar />
         </div>
-        <EccentricBackground />
-        <main className="flex-grow container mx-auto px-6 py-12">
+        <BackgroundCarousel />
+        <div className="flex-grow relative">
           <Routes>
-            <Route path="/" element={<Home/>} />
+            <Route path="/" element={
+              <div className="overflow-x-hidden">
+                <Home />
+              </div>
+            } />
             <Route path="/registration" element={<RegistrationHome/>} />
             <Route path="/registration/code-of-conduct" element={<CodeOfConduct/>} />
             <Route path="/program" element={<Program/>} />
             <Route path="/travel" element={<TravelHome/>} />
             <Route path="/travel/venue" element={<Venue/>} />
-            <Route path="/travel/accommodation" element={<Accommodation/>} />
-            <Route path="/travel/places" element={<Places/>} />
-            <Route path="/general/about" element={<About/>} />
-            <Route path="/general/contact" element={<Contact/>} />
-            <Route path="/general/faq" element={<FAQ/>} />
-            <Route path="/general/partners" element={<Partners/>} />
             <Route path="/sponsors" element={<Sponsors/>} />
+            <Route path="*" element={<ErrorPage />} />
           </Routes>
-        </main>
+        </div>
       </div>
     </Router>
-  )
+  );
 }

@@ -1,82 +1,67 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Footer from '../components/Footer';
 
-const scheduleData = [
-  { 
-    time: '10:00 AM - 10:30 AM', 
-    title: 'Opening Ceremony & Welcome Address', 
-    speaker: 'Prof. Rajeev Prakash, Director IIT Bhilai',
-    type: 'ceremony',
-    description: 'Inaugural session with workshop overview and objectives'
-  },
-  { 
-    time: '10:30 AM - 11:45 AM', 
-    title: 'Keynote: Foundations of Modern Cryptography', 
-    speaker: 'Dr. Dhiman Saha, IIT Bhilai',
-    type: 'keynote',
-    description: 'An introduction to cryptographic primitives and their applications'
-  },
-  { 
-    time: '11:45 AM - 12:00 PM', 
-    title: 'Coffee Break', 
-    speaker: null,
-    type: 'break',
-    description: 'Networking and refreshments'
-  },
-  { 
-    time: '12:00 PM - 1:00 PM', 
-    title: 'Tutorial: Symmetric Key Cryptography', 
-    speaker: 'Mr. Soumen Jana, IIT Bhilai',
-    type: 'tutorial',
-    description: 'Block ciphers, stream ciphers, and modes of operation'
-  },
-  { 
-    time: '1:00 PM - 2:00 PM', 
-    title: 'Lunch Break', 
-    speaker: null,
-    type: 'break',
-    description: 'Networking lunch at the campus dining hall'
-  },
-  { 
-    time: '2:00 PM - 3:15 PM', 
-    title: 'Workshop: Public Key Cryptography & RSA', 
-    speaker: 'Dr. Ananya Sharma, IIIT Delhi',
-    type: 'workshop',
-    description: 'Hands-on session on asymmetric encryption and digital signatures'
-  },
-  { 
-    time: '3:15 PM - 4:00 PM', 
-    title: 'Panel Discussion: Quantum-Safe Cryptography', 
-    speaker: 'Multiple Experts',
-    type: 'panel',
-    description: 'Preparing for the post-quantum era'
-  },
-  { 
-    time: '4:00 PM - 4:30 PM', 
-    title: 'Tea Break', 
-    speaker: null,
-    type: 'break',
-    description: 'Evening refreshments and networking'
-  },
-  { 
-    time: '4:30 PM - 5:45 PM', 
-    title: 'Cryptanalysis Techniques & Case Studies', 
-    speaker: 'Prof. Vikram Singh, IIT Bombay',
-    type: 'lecture',
-    description: 'Breaking ciphers and understanding vulnerabilities'
-  },
-  { 
-    time: '5:45 PM - 6:00 PM', 
-    title: 'Day 1 Wrap-up & Q&A', 
-    speaker: 'All Speakers',
-    type: 'discussion',
-    description: 'Open floor for questions and discussions'
-  },
+const schedule = [
+  // Day 1
+  [
+    { time: '9:00 - 10:00', event: 'Registration', chair: '', type: 'registration' },
+    { time: '10:00 - 10:45', event: 'Inauguration', chair: '', type: 'ceremony' },
+    { time: '10:45 - 11:45', event: 'BKR 1', chair: '', type: 'talk' },
+    { time: '11:45 - 12:00', event: 'Snacks & Tea', chair: 'DRC', type: 'break' },
+    { time: '12:00 - 13:00', event: 'BKR 2', chair: '', type: 'talk' },
+    { time: '13:00 - 14:00', event: 'Lunch', chair: '', type: 'break' },
+    { time: '14:00 - 15:00', event: 'DRC 1', chair: '', type: 'talk' },
+    { time: '15:00 - 15:15', event: 'Tea/Coffee', chair: 'HOD', type: 'break' },
+    { time: '15:15 - 16:15', event: 'DRC 2', chair: '', type: 'talk' },
+    { time: '16:15 - 17:15', event: 'Talk 3', chair: '', type: 'talk' },
+    { time: '17:15 - 17:30', event: 'Snacks & Tea', chair: '', type: 'break' },
+    { time: '17:30 - 18:30', event: 'Lightning Talks by Participants', chair: '', type: 'lightning' },
+  ],
+  // Day 2
+  [
+    { time: '9:30 - 10:30', event: 'Talk 4', chair: '', type: 'talk' },
+    { time: '10:30 - 11:30', event: 'Talk 5', chair: '', type: 'talk' },
+    { time: '11:30 - 12:00', event: 'Snacks & Tea', chair: '', type: 'break' },
+    { time: '12:00 - 13:00', event: 'Talk 6', chair: '', type: 'talk' },
+    { time: '13:00 - 14:00', event: 'Lunch', chair: '', type: 'break' },
+    { time: '14:00 - 15:00', event: 'Talk 7', chair: '', type: 'talk' },
+    { time: '15:00 - 15:30', event: 'IBITF Session', chair: '', type: 'session' },
+    { time: '15:30 - 16:30', event: 'Poster Session', chair: '', type: 'poster' },
+    { time: '16:30 - 17:00', event: 'Snacks & Tea', chair: '', type: 'break' },
+    { time: '17:00 - 18:00', event: 'Talk 8', chair: '', type: 'talk' },
+  ],
+  // Day 3
+  [
+    { time: '9:30 - 10:30', event: 'Talk 9', chair: '', type: 'talk' },
+    { time: '10:30 - 11:30', event: 'Talk 10', chair: '', type: 'talk' },
+    { time: '11:30 - 11:50', event: 'Snack and Tea', chair: '', type: 'break' },
+    { time: '11:50 - 12:45', event: 'Panel Discussion', chair: '', type: 'panel' },
+    { time: '12:45 - 13:00', event: 'Valedictory Session', chair: '', type: 'ceremony' },
+    { time: '13:00 - 14:30', event: 'Lunch', chair: '', type: 'break' },
+  ],
 ];
 
+const getTypeIcon = (type) => {
+  const colorMap = {
+    talk: 'bg-sky-500',
+    break: 'bg-amber-500',
+    ceremony: 'bg-purple-500',
+    registration: 'bg-green-500',
+    lightning: 'bg-red-500',
+    session: 'bg-indigo-500',
+    poster: 'bg-pink-500',
+    panel: 'bg-teal-500',
+    default: 'bg-gray-400',
+  };
+  const color = colorMap[type] || colorMap.default;
+  return <span className={`w-2.5 h-2.5 ${color} rounded-full mr-3 flex-shrink-0`}></span>;
+};
+
 export default function Program() {
+  const [activeDay, setActiveDay] = useState(0);
+
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -86,181 +71,53 @@ export default function Program() {
     });
   }, []);
 
-  const getTypeStyles = (type) => {
-    switch(type) {
-      case 'keynote':
-        return 'bg-purple-500/20 border-purple-400/50 hover:bg-purple-500/30';
-      case 'tutorial':
-        return 'bg-blue-500/20 border-blue-400/50 hover:bg-blue-500/30';
-      case 'workshop':
-        return 'bg-green-500/20 border-green-400/50 hover:bg-green-500/30';
-      case 'panel':
-        return 'bg-orange-500/20 border-orange-400/50 hover:bg-orange-500/30';
-      case 'lecture':
-        return 'bg-cyan-500/20 border-cyan-400/50 hover:bg-cyan-500/30';
-      case 'ceremony':
-        return 'bg-pink-500/20 border-pink-400/50 hover:bg-pink-500/30';
-      case 'discussion':
-        return 'bg-yellow-500/20 border-yellow-400/50 hover:bg-yellow-500/30';
-      case 'break':
-        return 'bg-gray-400/20 border-gray-400/50 hover:bg-gray-400/30';
-      default:
-        return 'bg-white/20 border-white/40 hover:bg-white/30';
-    }
-  };
-
-  const getTypeIcon = (type) => {
-    switch(type) {
-      case 'keynote':
-        return <span className="text-purple-500 font-bold">●</span>;
-      case 'tutorial':
-        return <span className="text-blue-500 font-bold">●</span>;
-      case 'workshop':
-        return <span className="text-green-500 font-bold">●</span>;
-      case 'panel':
-        return <span className="text-orange-500 font-bold">●</span>;
-      case 'lecture':
-        return <span className="text-cyan-500 font-bold">●</span>;
-      case 'ceremony':
-        return <span className="text-pink-500 font-bold">●</span>;
-      case 'discussion':
-        return <span className="text-yellow-600 font-bold">●</span>;
-      case 'break':
-        return <span className="text-gray-500 font-bold">●</span>;
-      default:
-        return <span className="text-gray-500 font-bold">●</span>;
-    }
-  };
-
   return (
-    <div className="min-h-screen py-12 px-4 md:px-8" style={{ backgroundColor: '#ffffff' }}>
-      {/* Header */}
-      <div className="max-w-5xl mx-auto mb-16 text-center" data-aos="fade-down">
-        <h1 className="text-5xl md:text-6xl font-bold text-[#2e2a30] mb-4">
-          Workshop Program
-        </h1>
-        <p className="text-xl text-[#2e2a30]/80">December 15, 2025 - Day 1</p>
-        <div className="mt-4 inline-block px-6 py-2 bg-white/30 backdrop-blur-md rounded-full border border-white/40">
-          <p className="text-sm font-medium text-[#2e2a30]">IIT Bhilai · 10:00 AM - 6:00 PM</p>
-        </div>
-      </div>
-
-      {/* Timeline */}
-      <div className="max-w-5xl mx-auto relative">
-        {/* Vertical line */}
-        <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#2e2a30]/20 via-[#2e2a30]/50 to-[#2e2a30]/20 
-                        transform md:-translate-x-1/2 hidden sm:block"></div>
-
-        {/* Timeline items */}
-        <div className="space-y-8">
-          {scheduleData.map((event, index) => (
-            <div
-              key={index}
-              data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-              data-aos-delay={index * 50}
-              className={`relative flex items-center ${
-                index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-              } flex-col md:gap-8`}
-            >
-              {/* Time badge - center on desktop */}
-              <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 z-10">
-                <div className="bg-[#2e2a30] text-white px-4 py-2 rounded-full shadow-lg 
-                              hover:scale-110 transition-all duration-300 hover:shadow-xl
-                              border-4 border-white/30 backdrop-blur-sm whitespace-nowrap
-                              animate-pulse-slow">
-                  <span className="font-bold text-sm">{event.time}</span>
-                </div>
-              </div>
-
-              {/* Content card */}
-              <div className={`w-full md:w-[calc(50%-3rem)] ${
-                index % 2 === 0 ? 'md:text-right md:pr-4' : 'md:text-left md:pl-4'
-              }`}>
-                <div className={`p-6 rounded-2xl backdrop-blur-xl border-2 shadow-lg
-                               transition-all duration-500 hover:scale-105 hover:shadow-2xl
-                               cursor-pointer group ${getTypeStyles(event.type)}`}>
-                  
-                  {/* Mobile time */}
-                  <div className="md:hidden mb-3 inline-block">
-                    <span className="bg-[#2e2a30] text-white px-3 py-1 rounded-full text-xs font-bold">
-                      {event.time}
-                    </span>
-                  </div>
-
-                  {/* Event icon & title */}
-                  <div className={`flex items-start gap-3 ${
-                    index % 2 === 0 ? 'md:flex-row-reverse md:text-right' : 'md:flex-row md:text-left'
-                  } flex-row text-left`}>
-                    <span className="text-3xl group-hover:scale-125 transition-transform duration-300">
-                      {getTypeIcon(event.type)}
-                    </span>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-[#2e2a30] mb-2 group-hover:text-[#1a1618] transition-colors">
-                        {event.title}
-                      </h3>
-                      {event.speaker && (
-                        <p className="text-sm font-medium text-[#2e2a30]/80 mb-2">
-                          {event.speaker}
-                        </p>
-                      )}
-                      <p className="text-sm text-[#2e2a30]/70 italic">
-                        {event.description}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Type badge */}
-                  <div className={`mt-3 inline-block ${index % 2 === 0 ? 'md:float-left' : 'md:float-right'}`}>
-                    <span className="px-3 py-1 bg-white/40 rounded-full text-xs font-semibold text-[#2e2a30] uppercase tracking-wide">
-                      {event.type}
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Placeholder for alternating layout */}
-              <div className="hidden md:block w-[calc(50%-3rem)]"></div>
+    <div className="min-h-screen flex flex-col pt-[140px]">
+      <main className="flex-grow px-4 md:px-8 pb-12">
+        <div className="max-w-5xl mx-auto">
+          <div className="mt-8 mb-16 bg-white/20 backdrop-blur-xl border border-white/30 rounded-3xl p-4 sm:p-6 md:p-8 shadow-lg" data-aos="fade-up">
+            <div className="flex justify-center border-b border-white/30 mb-4">
+              {['Day 1', 'Day 2', 'Day 3'].map((day, index) => (
+                <button
+                  key={day}
+                  onClick={() => setActiveDay(index)}
+                  className={`px-4 sm:px-6 py-3 text-sm sm:text-base font-medium transition-all duration-300
+                              ${activeDay === index
+                                ? 'text-[#2e2a30] border-b-2 border-[#7c3aed]'
+                                : 'text-[#2e2a30]/60 hover:text-[#2e2a30]'
+                              }`}
+                >
+                  {day}
+                </button>
+              ))}
             </div>
-          ))}
-        </div>
 
-        {/* End marker */}
-        <div className="mt-12 text-center" data-aos="fade-up">
-          <div className="inline-block p-6 bg-white/30 backdrop-blur-xl rounded-full border-4 border-white/40 
-                        hover:scale-110 transition-all duration-500 hover:shadow-xl cursor-pointer">
-            <span className="text-4xl font-bold text-[#2e2a30]">●</span>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm text-left text-[#2e2a30]">
+                              <thead className="text-xs text-[#2e2a30]/80 uppercase"><tr>
+                                  <th scope="col" className="px-4 py-3 md:w-1/4">Time</th>
+                                  <th scope="col" className="px-4 py-3 md:w-1/2">Event Name</th>
+                                  <th scope="col" className="px-4 py-3 md:w-1/4">Session Chair/Organiser</th>
+                                </tr></thead>
+                <tbody>
+                  {schedule[activeDay].map((item, index) => (
+                    <tr key={index} className="border-b border-white/40 hover:bg-white/10 transition-colors duration-200">
+                      <td className="px-4 py-4 font-medium whitespace-nowrap">{item.time}</td>
+                      <td className="px-4 py-4 font-semibold">
+                        <div className="flex items-center">
+                          {getTypeIcon(item.type)}
+                          <span>{item.event}</span>
+                        </div>
+                      </td>
+                      <td className="px-4 py-4">{item.chair}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
-          <p className="mt-4 text-lg font-bold text-[#2e2a30]">End of Day 1</p><p>
-
-
-          </p>
-          <p className="text-sm text-[#2e2a30]/70"> Au revoir</p>
         </div>
-      </div>
-
-      {/* Legend */}
-      <div className="max-w-5xl mx-auto mt-16 p-6 bg-white/20 backdrop-blur-xl rounded-2xl border border-white/40"
-           data-aos="fade-up">
-        <h3 className="text-lg font-bold text-[#2e2a30] mb-4 text-center">Session Types</h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
-          {['keynote', 'tutorial', 'workshop', 'panel', 'lecture', 'ceremony', 'discussion', 'break'].map((type) => (
-            <div key={type} className="flex items-center gap-2 justify-center">
-              <span className={`text-xl font-bold ${
-                type === 'keynote' ? 'text-purple-500' :
-                type === 'tutorial' ? 'text-blue-500' :
-                type === 'workshop' ? 'text-green-500' :
-                type === 'panel' ? 'text-orange-500' :
-                type === 'lecture' ? 'text-cyan-500' :
-                type === 'ceremony' ? 'text-pink-500' :
-                type === 'discussion' ? 'text-yellow-600' :
-                'text-gray-500'
-              }`}>●</span>
-              <span className="capitalize text-[#2e2a30] font-medium">{type}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-      
+      </main>
       <Footer />
     </div>
   );

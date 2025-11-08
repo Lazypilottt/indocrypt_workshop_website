@@ -20,3 +20,26 @@ body {
   background: linear-gradient(135deg, #b4a7af, #9f8f99);
   background-attachment: fixed;
 }
+
+/*----------------------------------------------------------------------------------------------------*/
+
+/* Global styles */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

@@ -1,0 +1,42 @@
+import React, { useEffect, useState } from 'react';
+
+// Import your background images
+const images = [
+  'url("https://picsum.photos/seed/picsum1/1920/1080")',
+  'url("https://picsum.photos/seed/picsum2/1920/1080")',
+  'url("https://picsum.photos/seed/picsum3/1920/1080")',
+  'url("https://picsum.photos/seed/picsum4/1920/1080")',
+  // Add more images as needed
+];
+
+export default function BackgroundCarousel() {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="fixed inset-0 -z-10">
+      {images.map((image, index) => (
+        <div
+          key={index}
+          className="absolute inset-0 w-full h-full transition-opacity duration-1000"
+          style={{
+            backgroundImage: image,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            opacity: index === currentImage ? 1 : 0,
+          }}
+        />
+      ))}
+      {/* <div className="absolute inset-0 bg-white/60 backdrop-blur-sm" /> */}
+      <div className="absolute inset-0 bg-white/60" />
+
+    </div>
+  );
+}

@@ -1,71 +1,100 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+
+  const navLinks = [
+    { label: 'Home', path: '/' },
+    { label: 'Program', path: '/program' },
+    { label: 'Registration', path: '/registration' },
+    { label: 'Venue', path: '/travel/venue' },
+    { label: 'Sponsors', path: '/sponsors' },
+  ];
 
   return (
-    <nav className="w-full bg-[#a5b4fc] border border-[#2e2a30]/20 shadow-lg rounded-[24px] mx-auto max-w-[80%] my-2">
-      <div className="max-w-7xl mx-auto px-6 py-1.5 flex items-center justify-center">
-
+    <nav className="max-w-7xl mx-auto my-2 px-3 sm:px-6 lg:px-8">
+      <div className="relative flex items-center justify-between md:justify-center">
         {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-10 items-center text-sm font-medium text-[#2e2a30]">
-          {[
-            { label: 'Home', path: '/' },
-            { label: 'Program', path: '/program' },
-            { label: 'Registration', path: '/registration' },
-            { label: 'Travel', path: '/travel' },
-            { label: 'About', path: '/general/about' },
-            { label: 'Sponsors', path: '/sponsors' },
-          ].map((link, i) => (
-            <Link
-              key={i}
-              to={link.path}
-              className="relative group px-3 py-1.5 hover:text-[#7c3aed] transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
-              style={{ animationDelay: `${i * 50}ms` }}
-            >
-              <span className="relative z-10 font-bold text-base tracking-wide">{link.label}</span>
-              <span className="absolute left-0 -bottom-1 w-0 h-[3px] bg-gradient-to-r from-[#7c3aed] via-[#ec4899] to-[#7c3aed] rounded-full transition-all duration-300 group-hover:w-full shadow-lg"></span>
-              <span className="absolute inset-0 bg-[#2e2a30]/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></span>
-              <span className="absolute inset-0 border-2 border-[#2e2a30]/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-            </Link>
-          ))}
+        <div className="hidden md:flex items-center backdrop-blur-md bg-[#7c3aed]/20
+                      rounded-[24px] w-full
+                      shadow-[0_8px_32px_0_rgba(124,58,237,0.3)]
+                      border border-[#7c3aed]/20 px-8 py-2">
+          <div className="flex gap-8 items-center justify-center w-full">
+            {navLinks.map((link, i) => (
+              <Link
+                key={i}
+                to={link.path}
+                className={`relative group px-3 py-1.5 transition-all duration-300 animate-fade-in ${
+                  location.pathname === link.path ? 'active-nav-link' : ''
+                }`}
+                style={{ animationDelay: `${i * 50}ms` }}
+              >
+                <span className={`relative z-10 font-medium text-[#2e2a30] text-sm tracking-wide
+                               group-hover:text-[#7c3aed] transition-colors duration-300 ${
+                                 location.pathname === link.path ? 'text-[#7c3aed]' : ''
+                               }`}>
+                  {link.label}
+                </span>
+                <span className={`absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r
+                               from-[#7c3aed] to-[#ec4899] rounded-full
+                               transition-all duration-300 group-hover:w-full ${
+                                 location.pathname === link.path ? 'w-full' : ''
+                               }`}></span>
+                <span className={`absolute inset-0 -z-10 rounded-xl opacity-0
+                               group-hover:opacity-100 transition-opacity duration-300
+                               bg-[#7c3aed]/10 backdrop-blur-sm ${
+                                 location.pathname === link.path ? 'opacity-100' : ''
+                               }`}></span>
+              </Link>
+            ))}
+          </div>
         </div>
 
-        {/* Mobile Toggle */}
-        <button
-          className="md:hidden text-[#2e2a30] text-3xl focus:outline-none transition-all duration-300 hover:scale-110 active:scale-95 hover:text-[#7c3aed] p-3 rounded-lg hover:bg-[#2e2a30]/10 absolute right-6"
-          onClick={() => setOpen(!open)}
-        >
-          <span className={`inline-block transition-transform duration-300 ${open ? 'rotate-90' : ''}`}>
-            {open ? '✕' : '☰'}
-          </span>
-        </button>
+        {/* Mobile Toggle Button */}
+        <div className="md:hidden ml-auto">
+          <button
+            className="backdrop-blur-md bg-[#7c3aed]/20
+                     shadow-[0_8px_32px_0_rgba(124,58,237,0.3)]
+                     border border-[#7c3aed]/20 rounded-xl p-2
+                     transition-all duration-300
+                     hover:bg-[#7c3aed]/30 active:scale-95 focus:outline-none"
+            onClick={() => setOpen(!open)}
+          >
+            <span className={`text-[#2e2a30] text-xl transition-transform duration-300
+                            block ${open ? '✕' : '☰'}`}>
+              {open ? '✕' : '☰'}
+            </span>
+          </button>
+        </div>
+
+        {/* Mobile Drawer */}
+        {open && (
+          <div className="absolute right-0 top-full mt-2 w-64 md:hidden
+                        backdrop-blur-md bg-[#7c3aed]/20 rounded-2xl
+                        shadow-[0_8px_32px_0_rgba(124,58,237,0.3)]
+                        border border-[#7c3aed]/20 overflow-hidden
+                        animate-slide-up z-50">
+            {navLinks.map((link, i) => (
+              <Link
+                key={i}
+                to={link.path}
+                className={`block py-3 px-6 text-[#2e2a30] hover:text-[#7c3aed]
+                         hover:bg-[#7c3aed]/10 transition-all duration-300
+                         border-b border-[#7c3aed]/10 last:border-none
+                         text-sm font-medium animate-fade-in ${
+                           location.pathname === link.path ? 'text-[#7c3aed] bg-[#7c3aed]/10' : ''
+                         }`}
+                style={{ animationDelay: `${i * 50}ms` }}
+                onClick={() => setOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
-
-      {/* Mobile Drawer */}
-      {open && (
-        <div className="md:hidden px-6 pb-5 text-[#2e2a30] text-base font-medium animate-slideDown bg-gradient-to-b from-[#a5b4fc] to-transparent">
-          {[
-            { label: 'Home', path: '/' },
-            { label: 'Program', path: '/program' },
-            { label: 'Registration', path: '/registration' },
-            { label: 'Travel', path: '/travel' },
-            { label: 'About', path: '/general/about' },
-            { label: 'Sponsors', path: '/sponsors' },
-          ].map((link, i) => (
-            <Link
-              key={i}
-              to={link.path}
-              className="block py-4 px-4 border-b border-[#2e2a30]/20 hover:text-[#7c3aed] hover:pl-6 hover:bg-[#2e2a30]/10 rounded-lg transition-all duration-300 transform hover:scale-[1.02] font-bold text-lg"
-              style={{ animationDelay: `${i * 50}ms` }}
-              onClick={() => setOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </div>
-      )}
     </nav>
   );
 }

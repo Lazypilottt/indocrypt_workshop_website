@@ -4,9 +4,9 @@ module.exports = {
     
     extend: {
       animation: {
-        'fade-in': 'fadeIn 0.8s ease-out',
-        'gradient-x': 'gradientX 6s ease infinite',
-        'slide-up': 'slideUp 0.4s ease-out',
+        'fade-in': 'fadeIn 0.4s ease-out',
+        'gradient-x': 'gradientX 3s ease infinite',
+        'slide-up': 'slideUp 0.2s ease-out',
       },
       keyframes: {
         fadeIn: {
