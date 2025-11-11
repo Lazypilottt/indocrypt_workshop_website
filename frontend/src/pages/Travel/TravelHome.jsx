@@ -16,6 +16,12 @@ const TravelHome = () => {
 
   const nearbyAttractions = [
     {
+     name: 'Jatmai Temple Trek',
+     description: 'A scenic trekking trail that leads to the sacred Jatmai Temple. The area is known for its lush greenery and a beautiful waterfall.',
+     image: 'https://lh3.googleusercontent.com/gps-cs-s/AG0ilSw3x70FfRGdEHO6dAgVskpiPy8m8z8mybnYmccbDc52zymi2z7mKEy_qsvIzUxXV2aRLzbwQFakgqnJHHwue9RPeygdz-agZJ_ecnqzuOLnJuB_HQic5I6bkpvTvSptU5tChXtt=w408-h464-k-no',
+     mapsLink: 'https://www.google.com/maps/search/?api=1&query=Jatmai+Temple',
+    },
+    {
       name: 'Tirathgarh Waterfall',
       description: 'Discover the breathtaking beauty of Tirathgarh Waterfall, a magnificent multi-tiered cascade within the lush Kanger Valley National Park. We suggest visiting after the monsoon to witness this natural marvel in its full glory.',
       image: 'https://lh3.googleusercontent.com/gps-cs-s/AG0ilSygZx6rKcv8vkHhnAd-RN0bVAyD4IbK1Ua-z6V2vsUqUIULrx5yWbmOmNDNhghwzO6xMLygkauWoaFzyL8rMJehqnFjUL3PxgyAkKQbwemE4XKuG6FNU46nhdB38ojvHXbRrRzDow=w408-h408-k-no',
@@ -179,7 +185,7 @@ const TravelHome = () => {
                     <h3 className="text-lg font-bold text-[#2e2a30] mb-2 group-hover:text-[#7c3aed] transition-colors duration-300">
                       {place.name}
                     </h3>
-                    <p className="text-sm text-[#2e2a30]/80 leading-relaxed" style={{ textAlign: 'justify !important' }}>
+                    <p className="text-sm text-[#2e2a30]/80 leading-relaxed flex-grow text-justify-force text-justify justify">
                       {place.description}
                     </p>
                     <a 

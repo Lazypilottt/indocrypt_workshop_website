@@ -221,3 +221,8 @@ html {
   border-image-slice: 1;
   animation: glowing-border-light 10s linear infinite;
 }
+
+.text-justify-force {
+  text-align: justify !important;
+  text-justify: inter-word !important;
+}
