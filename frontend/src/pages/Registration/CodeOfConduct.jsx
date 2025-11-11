@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Footer from '../../components/Footer';
 import GlowingBox from '../../components/GlowingBox';
 
 export default function CodeOfConduct() {
@@ -157,7 +156,6 @@ export default function CodeOfConduct() {
           </GlowingBox>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }

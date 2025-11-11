@@ -1,7 +1,6 @@
 import GlowingBox from "../components/GlowingBox";
 import { Link } from "react-router-dom";
 import Countdown from "../components/Countdown";
-import Footer from "../components/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -249,7 +248,7 @@ const Home = () => {
                         </div>
                       </div>
                     </div>
-                  </section>      <Footer />
+                  </section>      
     </main>
   );
 };

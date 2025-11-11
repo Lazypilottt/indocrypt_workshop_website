@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Footer from '../components/Footer';
 
 export default function ErrorPage() {
   return (
@@ -30,7 +29,6 @@ export default function ErrorPage() {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }

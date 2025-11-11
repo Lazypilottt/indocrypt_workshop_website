@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from '../../components/Footer';
 import GlowingBox from '../../components/GlowingBox';
 
 export default function Venue(){
@@ -41,7 +40,6 @@ export default function Venue(){
           </GlowingBox>
         </div>
       </main>
-      <Footer />
     </div>
   )
 }
