@@ -83,14 +83,14 @@ export default function RegistrationHome() {
             data-aos-delay="100"
           >
             <GlowingBox className="p-6 hover:bg-white/30 transition-all duration-300">
-              <h3 className="text-xl font-bold text-[#2e2a30] mb-3">Registration Deadline</h3>
-              <p className="text-[#2e2a30]/80">December 10, 2025</p>
+              <h3 className="text-xl font-bold text-[#2e2a30] mb-3">Registration</h3>
+              <p className="text-[#2e2a30]/80">November 09 - December 01, 2025</p>
               <p className="text-sm text-[#2e2a30]/60 mt-2">Limited seats available, register early!</p>
             </GlowingBox>
 
             <GlowingBox className="p-6 hover:bg-white/30 transition-all duration-300">
               <h3 className="text-xl font-bold text-[#2e2a30] mb-3">Workshop Dates</h3>
-              <p className="text-[#2e2a30]/80">December 15-17, 2025</p>
+              <p className="text-[#2e2a30]/80">December 07–09, 2025</p>
               <p className="text-sm text-[#2e2a30]/60 mt-2">Three days of intensive learning</p>
             </GlowingBox>
           </div>
