@@ -103,9 +103,10 @@ export default function RegistrationHome() {
           >
             <Link
               to="/registration/code-of-conduct"
-              className="inline-block px-8 py-3 rounded-full border-2 border-[#2e2a30]/40
-                       text-[#2e2a30] font-semibold hover:bg-[#2e2a30] hover:text-white
-                       transition-all duration-300 hover:scale-105"
+              className="inline-block px-12 py-4 rounded-full font-bold text-lg text-white
+                         bg-[#2e2a30] border border-[#2e2a30] shadow-glow-medium
+                         transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-glow-strong
+                         hover:-translate-y-1 active:scale-95"
             >
               View Code of Conduct
             </Link>
