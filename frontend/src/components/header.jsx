@@ -23,7 +23,7 @@ export default function Header() {
               rel="noopener noreferrer"
               className="group shrink-0"
             >
-              <div className="relative">
+              <div className="relative flex flex-col items-center">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r
                              from-[#7c3aed] to-[#ec4899] opacity-0
                              group-hover:opacity-100 blur-md

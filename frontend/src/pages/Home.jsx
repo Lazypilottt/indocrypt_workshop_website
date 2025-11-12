@@ -1,5 +1,5 @@
 import GlowingBox from "../components/GlowingBox";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Countdown from "../components/Countdown";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -18,6 +18,8 @@ import mridulImg from "../../assets/speakers/mridul_nandi.jpg";
 import brkImg from "../../assets/speakers/brk.avif"; // New import
 
 const Home = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -219,7 +221,8 @@ const Home = () => {
                       <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
                         <div
                           data-aos="fade-right"
-                          className="group"
+                          className="group cursor-pointer"
+                          onClick={() => navigate('/registration')}
                         >
                           <GlowingBox className="p-4 sm:p-6 transition-all duration-300 hover:scale-[1.02]">
                             <div className="text-center">
@@ -234,7 +237,8 @@ const Home = () => {
             
                         <div
                           data-aos="fade-left"
-                          className="group"
+                          className="group cursor-pointer"
+                          onClick={() => navigate('/program')}
                         >
                           <GlowingBox className="p-4 sm:p-6 transition-all duration-300 hover:scale-[1.02]">
                             <div className="text-center">
