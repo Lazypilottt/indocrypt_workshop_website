@@ -222,7 +222,7 @@ const Home = () => {
                         Important Dates
                       </h2>
             
-                      <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
+                      <div className="grid sm:grid-cols-3 gap-3 sm:gap-4">
                         <div
                           data-aos="fade-right"
                           className="group cursor-pointer"
@@ -234,7 +234,7 @@ const Home = () => {
                                            group-hover:text-[#7c3aed] transition-colors duration-300">
                                 Registration
                               </h3>
-                              <p className="text-sm text-[#2e2a30]/70">November 13 - December 01, 2025</p>
+                              <p className="text-sm text-[#2e2a30]/70">November 13-25, 2025</p>
                             </div>
                           </GlowingBox>
                         </div>
@@ -242,7 +242,23 @@ const Home = () => {
                         <div
                           data-aos="fade-left"
                           className="group cursor-pointer"
-                          onClick={() => navigate('/program')}
+                          onClick={() => navigate('#')}
+                        >
+                          <GlowingBox className="p-4 sm:p-6 transition-all duration-300 hover:scale-[1.02]">
+                            <div className="text-center">
+                              <h3 className="text-base sm:text-lg font-semibold text-[#2e2a30] mb-1
+                                           group-hover:text-[#7c3aed] transition-colors duration-300">
+                                Confirmation Mail
+                              </h3>
+                              <p className="text-sm text-[#2e2a30]/70">November 26 2025</p>
+                            </div>
+                          </GlowingBox>
+                        </div>
+            
+                        <div
+                          data-aos="fade-left"
+                          className="group cursor-pointer"
+                          onClick={() => navigate('/new-program')}
                         >
                           <GlowingBox className="p-4 sm:p-6 transition-all duration-300 hover:scale-[1.02]">
                             <div className="text-center">
