@@ -1,6 +1,4 @@
-import React, { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React, { useEffect, useRef, useState } from 'react';
 import GlowingBox from '../components/GlowingBox';
 
 // Sponsor images
@@ -10,51 +8,184 @@ import iitBhilaiLogo from '../../assets/sponsors/iitbhilai.png';
 import meityLogo from '../../assets/sponsors/meity.png';
 
 export default function Sponsors() {
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: true,
-    });
-  }, []);
-
   const sponsors = [
-    { name: 'DST (Department of Science and Technology)', logo: dstLogo, link: '#' },
-    { name: 'IBITF (IIT Bhilai Innovation and Technology Foundation)', logo: ibitfLogo, link: '#' },
-    { name: 'IIT Bhilai', logo: iitBhilaiLogo, link: 'https://www.iitbhilai.ac.in/' },
-    { name: 'MeitY (Ministry of Electronics and Information Technology)', logo: meityLogo, link: '#' },
+    { name: 'DST (Department of Science and Technology)', logo: dstLogo },
+    { name: 'IBITF (IIT Bhilai Innovation and Technology Foundation)', logo: ibitfLogo },
+    { name: 'IIT Bhilai', logo: iitBhilaiLogo },
+    { name: 'MeitY (Ministry of Electronics and Information Technology)', logo: meityLogo },
   ];
+
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+  const containerRef = useRef(null);
+
+  // Wait for original images to be loaded (handles cached images too)
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    // Select only the ORIGINAL images (first group)
+    const originalImgs = Array.from(container.querySelectorAll('.marquee__img[data-original="true"]'));
+    const total = originalImgs.length;
+    if (total === 0) {
+      setImagesLoaded(true);
+      return;
+    }
+
+    let loadedCount = 0;
+
+    const checkAndMaybeFinish = () => {
+      if (loadedCount >= total) {
+        // tiny delay to allow layout to stabilize
+        setTimeout(() => setImagesLoaded(true), 20);
+      }
+    };
+
+    const onLoad = () => {
+      loadedCount += 1;
+      checkAndMaybeFinish();
+    };
+
+    // Attach listeners and account for already-complete images
+    originalImgs.forEach((img) => {
+      if (img.complete && img.naturalWidth > 0) {
+        loadedCount += 1;
+      } else {
+        img.addEventListener('load', onLoad, { once: true });
+        img.addEventListener('error', onLoad, { once: true }); // treat error as "loaded" to avoid blocking
+      }
+    });
+
+    checkAndMaybeFinish();
+
+    // cleanup
+    return () => {
+      originalImgs.forEach((img) => {
+        img.removeEventListener('load', onLoad);
+        img.removeEventListener('error', onLoad);
+      });
+    };
+  }, [sponsors]);
 
   return (
     <div className="min-h-screen flex flex-col pt-[140px]">
       <main className="flex-grow px-4 md:px-8 pb-12">
-                                <div className="max-w-4xl mx-auto mt-8">
-                                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                                    {sponsors.map((sponsor, index) => (
-                                                              <a
-                                                                key={index}
-                                                                href={sponsor.link}
-                                                                target="_blank"
-                                                                rel="noopener noreferrer"
-                                                                data-aos="fade-up"
-                                                                data-aos-delay={100 + index * 100}
-                                                                className="group block transition-all duration-300 hover:scale-105"
-                                                              >
-                                                                <GlowingBox className="p-6 h-full flex flex-col justify-between items-center group-hover:shadow-glow-strong">                                          <div className="flex flex-col items-center text-center">
-                                            <img
-                                              src={sponsor.logo}
-                                              alt={sponsor.name}
-                                              className="h-24 object-contain mb-4"
-                                            />
-                                            <h3 className="text-lg font-semibold text-[#2e2a30] group-hover:text-[#7c3aed] transition-colors duration-300">
-                                              {sponsor.name}
-                                            </h3>
-                                          </div>
-                                        </GlowingBox>
-                                      </a>
-                                    ))}
-                                  </div>
-                                </div>      </main>
+        <div className="text-center">
+          <GlowingBox>
+            <div className="w-full overflow-hidden relative">
+              <div
+                ref={containerRef}
+                className={`marquee ${imagesLoaded ? 'marquee--animate' : 'marquee--idle'}`}
+                aria-hidden={imagesLoaded ? 'false' : 'true'}
+              >
+                {/* First group (original) */}
+                <div className="marquee__group">
+                  {sponsors.map((s, i) => (
+                    <div key={`a-${i}`} className="marquee__item">
+                      <img
+                        src={s.logo}
+                        alt={s.name}
+                        className="marquee__img"
+                        data-original="true"
+                        draggable="false"
+                      />
+                    </div>
+                  ))}
+                </div>
+
+                {/* Duplicate group (for seamless loop) */}
+                <div className="marquee__group">
+                  {sponsors.map((s, i) => (
+                    <div key={`b-${i}`} className="marquee__item">
+                      <img
+                        src={s.logo}
+                        alt=""
+                        className="marquee__img"
+                        data-original="false"
+                        draggable="false"
+                      />
+                    </div>
+                  ))}
+                </div>
+
+                {/* Third group for extra buffer */}
+                <div className="marquee__group" aria-hidden="true">
+                  {sponsors.map((s, i) => (
+                    <div key={`c-${i}`} className="marquee__item">
+                      <img
+                        src={s.logo}
+                        alt=""
+                        className="marquee__img"
+                        data-original="false"
+                        draggable="false"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </GlowingBox>
+        </div>
+      </main>
+
+      <style>{`
+        /* Container & layout */
+        .marquee {
+          display: flex;
+          width: max-content;
+          align-items: center;
+          gap: 0;
+          will-change: transform;
+        }
+
+        .marquee__group {
+          display: flex;
+          align-items: center;
+          flex-shrink: 0;
+        }
+
+        .marquee__item {
+          flex: 0 0 auto;
+          margin: 0 4rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        /* fixed height, variable width (keep aspect) */
+        .marquee__img {
+          height: 8rem;
+          width: auto;
+          display: block;
+          object-fit: contain;
+          user-select: none;
+          -webkit-user-drag: none;
+        }
+
+        /* Idle (no animation) — prevents overlap while loading */
+        .marquee--idle {
+          animation: none;
+        }
+
+        /* Continuous animation: move left by exactly 33.333% (one third since we have 3 groups) */
+        @keyframes marquee-scroll {
+          0% { 
+            transform: translateX(0); 
+          }
+          100% { 
+            transform: translateX(calc(-100% / 3)); 
+          }
+        }
+
+        .marquee--animate {
+          animation: marquee-scroll 40s linear infinite;
+        }
+
+        /* responsiveness */
+        @media (max-width: 640px) {
+          .marquee__item { margin: 0 0.8rem; }
+          .marquee__img { height: 3rem; }
+        }
+      `}</style>
     </div>
   );
 }
