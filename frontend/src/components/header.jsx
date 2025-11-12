@@ -67,7 +67,7 @@ export default function Header() {
               >
                 <img
                   src={decipheredLogo}
-                  alt="Deciphered"
+                  alt="de.ci.phe.red"
                   className="w-8 h-8 sm:w-8 lg:w-10 aspect-square object-contain
                            rounded-full transition-transform duration-500
                            group-hover:scale-110"
@@ -75,7 +75,7 @@ export default function Header() {
                 <span className="text-[10px] sm:text-xs lg:text-sm
                                font-medium text-[#2e2a30] opacity-80
                                group-hover:opacity-100">
-                  Deciphered
+                  de.ci.phe.red
                 </span>
               </a>
 
