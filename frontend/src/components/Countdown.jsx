@@ -22,7 +22,7 @@ export default function Countdown({ targetDate }) {
   }, [targetDate]);
 
   return (
-    <div className="flex gap-2 sm:gap-4 md:gap-6 justify-center mt-4 sm:mt-6 md:mt-8">
+    <div className="flex gap-1 sm:gap-3 md:gap-4 lg:gap-6 xl:gap-8 justify-center mt-4 sm:mt-6 md:mt-8">
       <CountdownUnit value={left.days} label="Days" />
       <CountdownUnit value={left.hrs} label="Hours" />
       <CountdownUnit value={left.mins} label="Minutes" />
