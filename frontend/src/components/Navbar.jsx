@@ -20,12 +20,12 @@ export default function Navbar() {
       <div className="relative flex items-center justify-between md:justify-center">
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center backdrop-blur-md bg-[#7c3aed]/20 rounded-[24px] w-full shadow-[0_8px_32px_0_rgba(124,58,237,0.3)] border border-[#7c3aed]/20 px-8 py-2">  
-          <div className="flex gap-8 items-center justify-center w-full">
+          <div className="flex flex-wrap items-center justify-center w-full gap-x-4 gap-y-2">
             {navLinks.map((link, i) => (
               <Link
                 key={i}
                 to={link.path}
-                className={`relative group px-3 py-1.5 transition-all duration-300 animate-fade-in ${
+                className={`relative group px-3 py-2.5 transition-all duration-300 animate-fade-in ${
                   location.pathname === link.path ? 'active-nav-link' : ''
                 }`}
                 style={{ animationDelay: `${i * 50}ms` }}
