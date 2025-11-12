@@ -19,10 +19,7 @@ export default function Navbar() {
     <nav className="max-w-7xl mx-auto my-2 px-3 sm:px-6 lg:px-8">
       <div className="relative flex items-center justify-between md:justify-center">
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center backdrop-blur-md bg-[#7c3aed]/20
-                      rounded-[24px] w-full
-                      shadow-[0_8px_32px_0_rgba(124,58,237,0.3)]
-                      border border-[#7c3aed]/20 px-8 py-2">
+        <div className="hidden md:flex items-center backdrop-blur-md bg-[#7c3aed]/20 rounded-[24px] w-full shadow-[0_8px_32px_0_rgba(124,58,237,0.3)] border border-[#7c3aed]/20 px-8 py-2">  
           <div className="flex gap-8 items-center justify-center w-full">
             {navLinks.map((link, i) => (
               <Link

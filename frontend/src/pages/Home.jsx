@@ -54,7 +54,7 @@ const Home = () => {
   ];
 
   return (
-    <main className="min-h-screen overflow-x-hidden max-w-full pt-[120px]">
+    <main className="min-h-screen overflow-x-hidden max-w-full">
       {/* Hero Section */}
       <section className="w-full px-4 pt-6 pb-12 sm:pt-8 sm:pb-16 overflow-hidden">
         <GlowingBox

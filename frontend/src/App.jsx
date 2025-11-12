@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/header';
 import Navbar from './components/Navbar';
@@ -15,15 +15,67 @@ import SubmissionOfPoster from './pages/SubmissionOfPoster';
 import ErrorPage from './pages/ErrorPage';
 import BackgroundCarousel from './components/BackgroundCarousel';
 
-export default function App(){ 
+export default function App() {
+  const [isSticky, setIsSticky] = useState(false);
+  const [navbarHeight, setNavbarHeight] = useState(0);
+  const headerRef = useRef(null);
+  const navbarContainerRef = useRef(null);
+
+  useEffect(() => {
+    const measureNavbar = () => {
+      if (navbarContainerRef.current) {
+        setNavbarHeight(navbarContainerRef.current.offsetHeight);
+      }
+    };
+
+    // Initial measure and on resize
+    measureNavbar();
+    window.addEventListener('resize', measureNavbar);
+
+    // A small delay to ensure everything is rendered for remeasurement, e.g., after route changes
+    const timeoutId = setTimeout(measureNavbar, 100);
+
+    return () => {
+      window.removeEventListener('resize', measureNavbar);
+      clearTimeout(timeoutId);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (headerRef.current) {
+        if (window.scrollY > headerRef.current.offsetHeight) {
+          setIsSticky(true);
+        } else {
+          setIsSticky(false);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <Router>
       <ScrollToTop />
       <div className="min-h-screen flex flex-col relative overflow-hidden">
-        <div>
-          <Header />
-          <Navbar />
+        <div ref={headerRef}>
+          <Header/>
         </div>
+
+        {/* Placeholder for the navbar to prevent content jump */}
+        <div style={{ height: navbarHeight > 0 ? `${navbarHeight}px` : 'auto' }}>
+          <div
+            ref={navbarContainerRef}
+            className={`z-40 w-full transition-shadow duration-300 ${
+              isSticky ? 'fixed top-0' : 'relative'
+            }`}
+          >
+            <Navbar />
+          </div>
+        </div>
+
         <BackgroundCarousel />
         <div className="flex-grow relative">
           <Routes>

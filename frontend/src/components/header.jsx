@@ -7,10 +7,10 @@ export default function Header() {
   return (
             <header className="relative w-full">
               {/* Background with glassmorphism */}
-              <div className="absolute inset-0 backdrop-blur-md bg-gradient-to-r
+              <div className={`absolute inset-0 backdrop-blur-md bg-gradient-to-r
                              from-[#7c3aed]/10 via-[#a5b4fc]/10 to-[#7c3aed]/10
                              border-b border-white/20
-                             shadow-[0_4px_30px_rgba(124,58,237,0.1)]">
+                             shadow-[0_4px_30px_rgba(124,58,237,0.1)]`}>
               </div>
 
               {/* Content */}
