@@ -16,6 +16,9 @@ import avikImg from "../../assets/speakers/avik.jpg";
 import dipanwitaImg from "../../assets/speakers/Dipanwita.jpg";
 import mridulImg from "../../assets/speakers/mridul_nandi.jpg";
 import brkImg from "../../assets/speakers/brk.avif"; // New import
+import prem from "../../assets/speakers/prem.png"; // New import
+import paul from "../../assets/speakers/paul.png"; // New import
+import santanu from "../../assets/speakers/shantanu.jpg"; // New import
 
 const Home = () => {
   const navigate = useNavigate();
@@ -31,17 +34,20 @@ const Home = () => {
   }, []);
 
   const speakers = [
-    { name: "Prof. Bimal Kumar Roy", expertise: "Combinatorics, and application of Statistics in Cryptology and Design of Experiments", university: "Indian Statistical Institute (ISI)", image: brkImg }, // New speaker
-    { name: "Prof. Dipanwita Roy Chowdhury", expertise: "Symmetric Key Cryptography", university: "IIT Kharagpur", image: dipanwitaImg },
-    { name: "Prof. Mridul Nandi", expertise: "Provable Security", university: "ISI Kolkata", image: mridulImg },
-    { name: "Dr. Shibam Ghosh", expertise: "Symmetric Key Cryptanalysis", university: "INRIA", image: shimanImg },
-    { name: "Dr. Mostafizar Rahman", expertise: "Symmetric Key Cryptanalysis", university: "NTU Singapore", image: mostafizarImg },
-    { name: "Dr. Angshuman Karmakar", expertise: "Post Quantum Cryptography", university: "IIT Kanpur", image: angshumanImg },
-    { name: "Dr. Satrajit Ghosh", expertise: "Multi-Party Computation", university: "IIT Kharagpur", image: satrajitImg },
-    { name: "Dr. Sabyasachi Karati", expertise: "Public Key Cryptography", university: "ISI Kolkata", image: sabyasachiImg },
-    // { name: "Dr. Anindita Banerjee", expertise: "Quantum Communication", university: "CDAC Pune", image: aninditaImg },
-    { name: "Dr. Avijit Dutta", expertise: "Provable Security", university: "TCG Crest", image: avijitImg },
-    { name: "Dr. Avik Chakraborti", expertise: "White Box Cryptography", university: "TCG Crest", image: avikImg },
+    { name: "Prof. Bimal Kumar Roy", university: "Indian Statistical Institute (ISI)", image: brkImg }, // New speaker
+    { name: "Prof. Dipanwita Roy Chowdhury", university: "IIT Kharagpur", image: dipanwitaImg },
+    { name: "Prof. Mridul Nandi", university: "ISI Kolkata", image: mridulImg },
+    { name: "Prof. Santanu Sarkar", university: "IIT Madras", image: santanu },
+    { name: "Dr. M. Prem Laxman Das", university: "SETS India", image: prem },
+    { name: "Dr. Goutam Paul", university: "ISI Kolkata", image: paul },
+    // { name: "Dr. Angshuman Karmakar", university: "IIT Kanpur", image: angshumanImg },
+    { name: "Dr. Satrajit Ghosh", university: "IIT Kharagpur", image: satrajitImg },
+    { name: "Dr. Sabyasachi Karati", university: "ISI Kolkata", image: sabyasachiImg },
+    // { name: "Dr. Anindita Banerjee", university: "CDAC Pune", image: aninditaImg },
+    // { name: "Dr. Avijit Dutta", university: "TCG Crest", image: avijitImg },
+    { name: "Dr. Avik Chakraborti", university: "TCG Crest", image: avikImg },
+    { name: "Dr. Shibam Ghosh", university: "INRIA", image: shimanImg },
+    { name: "Dr. Mostafizar Rahman", university: "NTU Singapore", image: mostafizarImg },
   ];
 
   const focusAreas = [
@@ -164,9 +170,7 @@ const Home = () => {
                                  group-hover:text-[#7c3aed] transition-colors duration-500">
                       {speaker.name}
                     </h3>
-                    <p className="text-[10px] sm:text-xs font-medium text-[#7c3aed]/80">
-                      {speaker.expertise}
-                    </p>
+
                     <p className="text-[10px] sm:text-xs text-[#2e2a30]/60">
                       {speaker.university}
                     </p>
@@ -230,7 +234,7 @@ const Home = () => {
                                            group-hover:text-[#7c3aed] transition-colors duration-300">
                                 Registration
                               </h3>
-                              <p className="text-sm text-[#2e2a30]/70">November 09 - December 01, 2025</p>
+                              <p className="text-sm text-[#2e2a30]/70">November 13 - December 01, 2025</p>
                             </div>
                           </GlowingBox>
                         </div>

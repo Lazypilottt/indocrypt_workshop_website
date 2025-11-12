@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import RegistrationHome from './pages/Registration/RegistrationHome';
 import CodeOfConduct from './pages/Registration/CodeOfConduct';
 import Program from './pages/Program';
+import NewProgram from './pages/NewProgram';
 import TravelHome from './pages/Travel/TravelHome';
 import Venue from './pages/Travel/Venue';
 import Sponsors from './pages/Sponsors';
@@ -59,7 +60,7 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen flex flex-col relative overflow-hidden">
+      <div className="flex flex-col relative overflow-hidden">
         <div ref={headerRef}>
           <Header/>
         </div>
@@ -77,7 +78,7 @@ export default function App() {
         </div>
 
         <BackgroundCarousel />
-        <div className="flex-grow relative">
+        <div className="relative">
           <Routes>
             <Route path="/" element={
               <div className="overflow-x-hidden">
@@ -86,7 +87,7 @@ export default function App() {
             } />
             <Route path="/registration" element={<RegistrationHome/>} />
             <Route path="/registration/code-of-conduct" element={<CodeOfConduct/>} />
-            <Route path="/program" element={<Program/>} />
+            <Route path="/new-program" element={<NewProgram/>} />
             <Route path="/travel" element={<TravelHome/>} />
             <Route path="/travel/venue" element={<Venue/>} />
             <Route path="/sponsors" element={<Sponsors/>} />

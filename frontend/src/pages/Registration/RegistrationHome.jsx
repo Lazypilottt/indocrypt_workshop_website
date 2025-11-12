@@ -84,7 +84,7 @@ export default function RegistrationHome() {
           >
             <GlowingBox className="p-6 hover:bg-white/30 transition-all duration-300">
               <h3 className="text-xl font-bold text-[#2e2a30] mb-3">Registration</h3>
-              <p className="text-[#2e2a30]/80">November 09 - December 01, 2025</p>
+              <p className="text-[#2e2a30]/80">November 13 - December 01, 2025</p>
               <p className="text-sm text-[#2e2a30]/60 mt-2">Limited seats available, register early!</p>
             </GlowingBox>
 
