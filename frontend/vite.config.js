@@ -3,6 +3,10 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+
+  // Use relative paths so Apache can serve from any directory
+  base: './',
+
   server: {
     port: 3000,
     proxy: {
