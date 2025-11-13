@@ -78,7 +78,7 @@ export default function RegistrationHome() {
 
           {/* Important Information */}
           <div
-            className="grid md:grid-cols-3 gap-6 mb-8"
+            className="grid md:grid-cols-4 gap-6 mb-8"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -92,6 +92,12 @@ export default function RegistrationHome() {
               <h3 className="text-xl font-bold text-[#2e2a30] mb-3">Confirmation Mail</h3>
               <p className="text-[#2e2a30]/80">November 26, 2025</p>
               <p className="text-sm text-[#2e2a30]/60 mt-2">Check Your Inbox for Confirmation!</p>
+            </GlowingBox>
+
+            <GlowingBox className="p-6 hover:bg-white/30 transition-all duration-300">
+              <h3 className="text-xl font-bold text-[#2e2a30] mb-3">Poster Submission</h3>
+              <p className="text-[#2e2a30]/80">November 30, 2025</p>
+              <p className="text-sm text-[#2e2a30]/60 mt-2">Ready, Set, Submit!</p>
             </GlowingBox>
 
             <GlowingBox className="p-6 hover:bg-white/30 transition-all duration-300">
