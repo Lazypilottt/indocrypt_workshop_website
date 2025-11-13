@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
 
   // Use relative paths so Apache can serve from any directory
-  base: './',
+  base: '/nwc/',
 
   server: {
     port: 3000,

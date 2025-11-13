@@ -58,7 +58,7 @@ export default function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/nwc">
       <ScrollToTop />
       <div className="flex flex-col relative overflow-hidden">
         <div ref={headerRef}>
