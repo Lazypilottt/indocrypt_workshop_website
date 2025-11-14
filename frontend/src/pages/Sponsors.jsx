@@ -22,9 +22,9 @@ export default function Sponsors() {
   const sponsors = [
     { name: 'CRSI (Cryptology Research Society of India)', logo: crsiLogo, link: 'https://crsind.in/' },
 //    { name: 'DST (Department of Science and Technology)', logo: dstLogo, link: '#' },
-    { name: 'IBITF (IIT Bhilai Innovation and Technology Foundation)', logo: ibitfLogo, link: '#' },
+    { name: 'IBITF (IIT Bhilai Innovation and Technology Foundation)', logo: ibitfLogo, link: 'https://www.ibitf.co.in/' },
     { name: 'IIT Bhilai', logo: iitBhilaiLogo, link: 'https://www.iitbhilai.ac.in/' },
-    { name: 'MeitY (Ministry of Electronics and Information Technology)', logo: meityLogo, link: '#' },
+    { name: 'MeitY (Ministry of Electronics and Information Technology)', logo: meityLogo, link: 'https://www.meity.gov.in/' },
   ];
 
   return (

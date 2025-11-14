@@ -81,7 +81,7 @@ export default function Header() {
 
               {/* IIT Bhilai Logo */}
               <a
-                href="https://www.iitbhilai.ac.in/"
+                href="https://www.iitbhilai.ac.in/index.php?pid=dept_cse"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center space-x-2 px-2 sm:px-4 py-1.5
