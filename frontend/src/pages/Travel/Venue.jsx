@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import GlowingBox from '../../components/GlowingBox';
 import { Plane, Train, Car } from 'lucide-react'; // Added imports
 
@@ -26,6 +27,21 @@ export default function Venue(){
                 <div><strong>By Road:</strong> The campus is well-connected by road from both Durg and Raipur. Regular taxi and bus services are readily available for a convenient commute.</div>
               </li>
             </ul>
+            <div className="mt-8 text-center">
+              <h3 className="text-2xl font-bold text-[#2e2a30] mb-4">Explore Nearby Sites</h3>
+              <p className="text-lg text-[#2e2a30]/80 leading-relaxed text-justify mb-6">
+                While you are here for the workshop, take some time to explore the fascinating attractions and natural wonders located near IIT Bhilai. Discover local culture, historical sites, and beautiful landscapes to make your visit even more memorable.
+              </p>
+              <Link
+                to="/travel"
+                className="inline-block bg-black text-white py-3 px-6 rounded-lg
+                           shadow-[0_0_15px_rgba(124,58,237,0.8)]
+                           hover:scale-105 hover:shadow-[0_0_25px_rgba(124,58,237,1)]
+                           transition-all duration-300 ease-in-out font-semibold"
+              >
+                Discover Nearby Sites
+              </Link>
+            </div>
           </GlowingBox>
 
           <GlowingBox className="mt-8 overflow-hidden">

@@ -12,7 +12,6 @@ export default function Navbar() {
     { label: 'Poster Submission', path: '/submission-of-poster' },
     { label: 'Venue', path: '/travel/venue' },
     { label: 'Sponsors', path: '/sponsors' },
-    { label: 'Nearby Wonders', path: '/travel' },
   ];
 
   return (

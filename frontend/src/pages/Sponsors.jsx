@@ -28,35 +28,37 @@ export default function Sponsors() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col pt-[140px]">
+    <div className="min-h-screen flex flex-col pt-[40px]">
       <main className="flex-grow px-4 md:px-8 pb-12">
-                                <div className="max-w-4xl mx-auto mt-8">
-                                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                                    {sponsors.map((sponsor, index) => (
-                                                              <a
-                                                                key={index}
-                                                                href={sponsor.link}
-                                                                target="_blank"
-                                                                rel="noopener noreferrer"
-                                                                data-aos="fade-up"
-                                                                data-aos-delay={100 + index * 100}
-                                                                className="block transition-all duration-300 scale-105"
-                                                              >
-                                                                <GlowingBox className="p-6 h-full flex flex-col justify-between items-center shadow-glow-strong">                                          <div className="flex flex-col items-center text-center">
-                                            <img
-                                              src={sponsor.logo}
-                                              alt={sponsor.name}
-                                              className="h-24 object-contain mb-4"
-                                            />
-                                            <h3 className="text-lg font-semibold text-[#7c3aed] transition-colors duration-300">
-                                              {sponsor.name}
-                                            </h3>
-                                          </div>
-                                        </GlowingBox>
-                                      </a>
-                                    ))}
-                                  </div>
-                                </div>      </main>
+        <div className="max-w-4xl mx-auto mt-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-items-center">
+            {sponsors.map((sponsor, index) => (
+              <div
+                key={index}
+                data-aos="fade-up"
+                data-aos-delay={100 + index * 100}
+                className="flex flex-col items-center transition-all duration-300 hover:scale-110"
+              >
+                <a
+                  href={sponsor.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <GlowingBox className="w-64 h-64 p-0 flex justify-center items-center shadow-glow-medium hover:shadow-glow-strong !bg-white !backdrop-blur-none rounded-full overflow-hidden transition-all duration-300 hover:scale-110">
+                    <img
+                      src={sponsor.logo}
+                      alt={sponsor.name}
+                      className="h-full w-full object-contain"
+                    />
+                  </GlowingBox>
+                </a>
+                <div className="text-center mt-4 text-lg font-semibold text-black" style={{ textShadow: '0 0 8px rgba(128, 0, 128, 0.7)' }}>{sponsor.name}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
