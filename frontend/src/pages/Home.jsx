@@ -19,6 +19,7 @@ import brkImg from "../../assets/speakers/brk.avif"; // New import
 import prem from "../../assets/speakers/prem.png"; // New import
 import paul from "../../assets/speakers/paul.png"; // New import
 import santanu from "../../assets/speakers/shantanu.jpg"; // New import
+import skpal from "../../assets/speakers/skpal.png"; // New import
 
 const Home = () => {
   const navigate = useNavigate();
@@ -38,8 +39,9 @@ const Home = () => {
     { name: "Prof. Dipanwita Roy Chowdhury", university: "IIT Kharagpur", image: dipanwitaImg },
     // { name: "Prof. Mridul Nandi", university: "ISI Kolkata", image: mridulImg },
     { name: "Prof. Santanu Sarkar", university: "IIT Madras", image: santanu },
+    { name: "Prof. Goutam Paul", university: "ISI Kolkata", image: paul },
     { name: "Dr. M. Prem Laxman Das", university: "SETS India", image: prem },
-    { name: "Dr. Goutam Paul", university: "ISI Kolkata", image: paul },
+    { name: "Dr. Saibal K. Pal", university: "DRDO Delhi", image: skpal },
     // { name: "Dr. Angshuman Karmakar", university: "IIT Kanpur", image: angshumanImg },
     { name: "Dr. Satrajit Ghosh", university: "IIT Kharagpur", image: satrajitImg },
     { name: "Dr. Sabyasachi Karati", university: "ISI Kolkata", image: sabyasachiImg },
