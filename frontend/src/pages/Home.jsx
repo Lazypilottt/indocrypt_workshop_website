@@ -41,7 +41,7 @@ const Home = () => {
     { name: "Prof. Santanu Sarkar", university: "IIT Madras", image: santanu },
     { name: "Prof. Goutam Paul", university: "ISI Kolkata", image: paul },
     { name: "Dr. M. Prem Laxman Das", university: "SETS India", image: prem },
-    { name: "Dr. Saibal K. Pal", university: "DRDO Delhi", image: skpal },
+    { name: "Dr. Saibal K. Pal", university: "SAG DRDO", image: skpal },
     // { name: "Dr. Angshuman Karmakar", university: "IIT Kanpur", image: angshumanImg },
     { name: "Dr. Satrajit Ghosh", university: "IIT Kharagpur", image: satrajitImg },
     { name: "Dr. Sabyasachi Karati", university: "ISI Kolkata", image: sabyasachiImg },
