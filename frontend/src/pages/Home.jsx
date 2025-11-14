@@ -85,7 +85,7 @@ const Home = () => {
           </div>
 
           <div className="mt-6 sm:mt-8">
-            <Countdown targetDate="2025-12-07T00:00:00+05:30" />
+            <Countdown targetDate="2025-12-07T09:00:00+05:30" />
           </div>
 
           <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row justify-center gap-3">
