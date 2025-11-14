@@ -4,7 +4,8 @@ import 'aos/dist/aos.css';
 import GlowingBox from '../components/GlowingBox';
 
 // Sponsor images
-import dstLogo from '../../assets/sponsors/dst.png';
+import crsiLogo from '../../assets/sponsors/crsi.png';
+//import dstLogo from '../../assets/sponsors/dst.png';
 import ibitfLogo from '../../assets/sponsors/ibitf.png';
 import iitBhilaiLogo from '../../assets/sponsors/iitbhilai.png';
 import meityLogo from '../../assets/sponsors/meity.png';
@@ -19,7 +20,8 @@ export default function Sponsors() {
   }, []);
 
   const sponsors = [
-    { name: 'DST (Department of Science and Technology)', logo: dstLogo, link: '#' },
+    { name: 'CRSI (Cryptology Research Society of India)', logo: crsiLogo, link: 'https://crsind.in/' },
+//    { name: 'DST (Department of Science and Technology)', logo: dstLogo, link: '#' },
     { name: 'IBITF (IIT Bhilai Innovation and Technology Foundation)', logo: ibitfLogo, link: '#' },
     { name: 'IIT Bhilai', logo: iitBhilaiLogo, link: 'https://www.iitbhilai.ac.in/' },
     { name: 'MeitY (Ministry of Electronics and Information Technology)', logo: meityLogo, link: '#' },
