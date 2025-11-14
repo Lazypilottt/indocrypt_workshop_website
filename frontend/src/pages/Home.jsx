@@ -36,7 +36,7 @@ const Home = () => {
   const speakers = [
     { name: "Prof. Bimal Kumar Roy", university: "Indian Statistical Institute (ISI)", image: brkImg }, // New speaker
     { name: "Prof. Dipanwita Roy Chowdhury", university: "IIT Kharagpur", image: dipanwitaImg },
-    { name: "Prof. Mridul Nandi", university: "ISI Kolkata", image: mridulImg },
+    // { name: "Prof. Mridul Nandi", university: "ISI Kolkata", image: mridulImg },
     { name: "Prof. Santanu Sarkar", university: "IIT Madras", image: santanu },
     { name: "Dr. M. Prem Laxman Das", university: "SETS India", image: prem },
     { name: "Dr. Goutam Paul", university: "ISI Kolkata", image: paul },
@@ -45,7 +45,7 @@ const Home = () => {
     { name: "Dr. Sabyasachi Karati", university: "ISI Kolkata", image: sabyasachiImg },
     // { name: "Dr. Anindita Banerjee", university: "CDAC Pune", image: aninditaImg },
     // { name: "Dr. Avijit Dutta", university: "TCG Crest", image: avijitImg },
-    { name: "Dr. Avik Chakraborti", university: "TCG Crest", image: avikImg },
+    // { name: "Dr. Avik Chakraborti", university: "TCG Crest", image: avikImg },
     { name: "Dr. Shibam Ghosh", university: "INRIA", image: shimanImg },
     { name: "Dr. Mostafizar Rahman", university: "NTU Singapore", image: mostafizarImg },
   ];

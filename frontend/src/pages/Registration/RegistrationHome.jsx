@@ -37,15 +37,15 @@ export default function RegistrationHome() {
                 <ul className="space-y-4 text-[#2e2a30]/80">
                   <li className="flex items-start">
                     <svg className="w-6 h-6 text-[#7c3aed] mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h10a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" /></svg>
-                    <div><strong>No Registration Fee:</strong> Participation in NWC 2025 is completely free of charge.</div>
+                    <div><strong>No Registration Fee:</strong> Participation in NWC 2025 is completely free of charge</div>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-6 h-6 text-[#7c3aed] mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M12 20h9" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16" /><path stroke-linecap="round" stroke-linejoin="round" d="M8 20h-5a1 1 0 01-1-1V5a1 1 0 011-1h5" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 8h9" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 12h9" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 16h9" /></svg>
-                    <div><strong>Accommodation:</strong> Complimentary accommodation will be provided to all selected participants within the IIT Bhilai campus.</div>
+                    <div><strong>Accommodation:</strong> Complimentary accommodation will be provided to all selected participants within the IIT Bhilai campus</div>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-6 h-6 text-[#7c3aed] mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H4a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg>
-                    <div><strong>Travel Reimbursement:</strong> Students are eligible for travel expense reimbursement up to 3rd AC train fare or equivalent, as per institute norms.</div>
+                    <div><strong>Travel Reimbursement:</strong> Students are eligible for travel expense reimbursement of either 3rd AC train fare or bus fare upto {"\u20B9"}1000 (each for arrival and departure)</div>
                   </li>
                 </ul>
               </div>
@@ -53,7 +53,7 @@ export default function RegistrationHome() {
               <div className="bg-white/20 rounded-2xl p-6 border-l-4 border-amber-500">
                 <h3 className="text-xl font-bold text-[#2e2a30] mb-2">Important Note</h3>
                 <p className="text-[#2e2a30]/80 leading-relaxed text-justify">
-                  Please be advised that seats for the workshop are limited. Submission of the registration form does not guarantee participation. All applications will undergo a selection process, and confirmed participants will be notified via email. We encourage you to register early to secure your consideration.
+                  Please be advised that seats for the workshop are limited. Submission of the registration form <b>does not guarantee participation</b>. All applications will undergo a selection process, and confirmed participants will be notified via email. We encourage you to register early to secure your consideration.
                 </p>
               </div>
 
