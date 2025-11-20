@@ -15,6 +15,7 @@ import Sponsors from './pages/Sponsors';
 import SubmissionOfPoster from './pages/SubmissionOfPoster';
 import ErrorPage from './pages/ErrorPage';
 import BackgroundCarousel from './components/BackgroundCarousel';
+import FloatingButton from './components/FloatingButton';
 
 export default function App() {
   const [isSticky, setIsSticky] = useState(false);
@@ -96,6 +97,7 @@ export default function App() {
           </Routes>
         </div>
         <Footer />
+        <FloatingButton />
       </div>
     </Router>
   );
