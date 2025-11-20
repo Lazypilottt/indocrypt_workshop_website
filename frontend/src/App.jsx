@@ -13,6 +13,7 @@ import TravelHome from './pages/Travel/TravelHome';
 import Venue from './pages/Travel/Venue';
 import Sponsors from './pages/Sponsors';
 import SubmissionOfPoster from './pages/SubmissionOfPoster';
+import OrganisingCommittee from './pages/OrganisingCommittee';
 import ErrorPage from './pages/ErrorPage';
 import BackgroundCarousel from './components/BackgroundCarousel';
 import FloatingButton from './components/FloatingButton';
@@ -79,7 +80,7 @@ export default function App() {
         </div>
 
         <BackgroundCarousel />
-        <div className="relative">
+        <div className="relative flex-grow">
           <Routes>
             <Route path="/" element={
               <div className="overflow-x-hidden">
@@ -93,6 +94,7 @@ export default function App() {
             <Route path="/travel/venue" element={<Venue/>} />
             <Route path="/sponsors" element={<Sponsors/>} />
             <Route path="/submission-of-poster" element={<SubmissionOfPoster />} />
+            <Route path="/organising-committee" element={<OrganisingCommittee />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </div>

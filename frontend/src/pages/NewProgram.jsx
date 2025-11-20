@@ -14,18 +14,20 @@ const NewProgram = () => {
     });
   }, []);
   return (
-    <main className="overflow-x-hidden max-w-full">
-      <section className="w-full px-4 pt-6 pb-12 sm:pt-8 sm:pb-16 overflow-hidden">
-        <GlowingBox
-          data-aos="fade-up"
-          className="max-w-4xl mx-auto transition-all duration-300"
-        >
-          <h2 className="text-xl sm:text-3xl font-bold text-center text-[#2e2a30] mb-8">
-            To Be Announced
-          </h2>
-        </GlowingBox>
-      </section>
-    </main>
+    <div className="min-h-screen flex flex-col pt-[140px]">
+      <main className="flex-grow overflow-x-hidden max-w-full">
+        <section className="w-full px-4 pt-6 pb-12 sm:pt-8 sm:pb-16 overflow-hidden">
+          <GlowingBox
+            data-aos="fade-up"
+            className="max-w-4xl mx-auto transition-all duration-300"
+          >
+            <h2 className="text-xl sm:text-3xl font-bold text-center text-[#2e2a30] mb-8">
+              To Be Announced
+            </h2>
+          </GlowingBox>
+        </section>
+      </main>
+    </div>
   );
 };
 
