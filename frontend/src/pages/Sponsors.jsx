@@ -7,7 +7,7 @@ import GlowingBox from '../components/GlowingBox';
 import crsiLogo from '../../assets/sponsors/crsi.png';
 //import dstLogo from '../../assets/sponsors/dst.png';
 import ibitfLogo from '../../assets/sponsors/ibitf.png';
-import iitBhilaiLogo from '../../assets/sponsors/iitbhilai.png';
+import iitBhilaiLogo from '../../assets/sponsors/IIT_B.svg';
 import meityLogo from '../../assets/sponsors/meity.png';
 
 export default function Sponsors() {
