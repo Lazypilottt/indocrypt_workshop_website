@@ -17,7 +17,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.4s ease-in-out;
+    transition: width 1.8s ease-in-out, height 1.8s ease-in-out, box-shadow 1.8s ease-in-out;
     overflow: hidden;
     box-shadow: 0 0 25px 5px rgba(124, 58, 237, 0.6); /* Stronger light aura */
   }
