@@ -20,6 +20,7 @@ import prem from "../../assets/speakers/prem.png"; // New import
 import paul from "../../assets/speakers/paul.png"; // New import
 import santanu from "../../assets/speakers/shantanu.jpg"; // New import
 import skpal from "../../assets/speakers/skpal.png"; // New import
+import gm from "../../assets/speakers/gm.jpeg"; // New import
 
 const Home = () => {
   const navigate = useNavigate();
@@ -35,18 +36,19 @@ const Home = () => {
   }, []);
 
   const speakers = [
-    { name: "Prof. Bimal Kumar Roy", university: "Indian Statistical Institute (ISI)", image: brkImg }, // New speaker
+    { name: "Prof. Bimal Kumar Roy", university: "Cryptology Research Society of India (CRSI)", image: brkImg }, // New speaker
     { name: "Prof. Dipanwita Roy Chowdhury", university: "IIT Kharagpur", image: dipanwitaImg },
     // { name: "Prof. Mridul Nandi", university: "ISI Kolkata", image: mridulImg },
-    { name: "Prof. Santanu Sarkar", university: "IIT Madras", image: santanu },
+    // { name: "Prof. Santanu Sarkar", university: "IIT Madras", image: santanu },
     { name: "Prof. Goutam Paul", university: "ISI Kolkata", image: paul },
+    { name: "Dr. Girish Mishra", university: "SAG DRDO", image: gm },
+    { name: "Dr. Avijit Dutta", university: "TCG Crest", image: avijitImg },
     { name: "Dr. M. Prem Laxman Das", university: "SETS India", image: prem },
-    { name: "Dr. Saibal K. Pal", university: "SAG DRDO", image: skpal },
+    // { name: "Dr. Saibal K. Pal", university: "SAG DRDO", image: skpal },
     // { name: "Dr. Angshuman Karmakar", university: "IIT Kanpur", image: angshumanImg },
-    { name: "Dr. Satrajit Ghosh", university: "IIT Kharagpur", image: satrajitImg },
+    // { name: "Dr. Satrajit Ghosh", university: "IIT Kharagpur", image: satrajitImg },
     { name: "Dr. Sabyasachi Karati", university: "ISI Kolkata", image: sabyasachiImg },
     // { name: "Dr. Anindita Banerjee", university: "CDAC Pune", image: aninditaImg },
-    // { name: "Dr. Avijit Dutta", university: "TCG Crest", image: avijitImg },
     // { name: "Dr. Avik Chakraborti", university: "TCG Crest", image: avikImg },
     { name: "Dr. Shibam Ghosh", university: "INRIA", image: shimanImg },
     { name: "Dr. Mostafizar Rahman", university: "NTU Singapore", image: mostafizarImg },
@@ -125,7 +127,7 @@ const Home = () => {
           <GlowingBox className="p-5 sm:p-8">
             <div className="space-y-4 text-[#2e2a30]/90 text-sm sm:text-base leading-relaxed text-justify">
               <p className="first-letter:text-3xl first-letter:font-bold">
-                In a landmark collaboration, the <strong>Indian Institute of Technology Bhilai</strong> and the <strong>Cryptology Research Society of India (CRSI)</strong> are proud to present the <strong>National Workshop on Cryptology (NWC 2025)</strong>. As the flagship annual event of CRSI, this workshop serves as a premier national forum dedicated to uniting the brightest minds in cryptology and information security. The event is being organized by <strong>
+                <strong>Indian Institute of Technology Bhilai</strong> and the <strong>Cryptology Research Society of India (CRSI)</strong> are proud to present the <strong>National Workshop on Cryptology (NWC 2025)</strong>. As the flagship annual event of CRSI, this workshop serves as a premier national forum dedicated to uniting the brightest minds in cryptology and information security. The event is being organized by <strong>
                   <a
                     href="http://de.ci.phe.red/"
                     target="_blank"
@@ -134,7 +136,7 @@ const Home = () => {
                   >
                     de.ci.phe.red Lab
                   </a>
-                </strong>, Department of Computer Science and Engineering, IIT Bhilai, which is actively engaged in cutting-edge research in cryptography, cybersecurity, and related domains. IIT Bhilai, one of India’s newer IITs, is committed to fostering innovation, interdisciplinary collaboration, and excellence in research and education. Through NWC 2025, the institute aims to create a vibrant platform for researchers, academicians, students, and industry pioneers to engage in meaningful dialogue, share insights, and collectively advance the frontiers of cryptology in India.
+                </strong>, Department of Computer Science and Engineering, IIT Bhilai, which is actively engaged in cutting-edge research in cryptography, cybersecurity, and related domains. Through the workshop, the institute aims to create a vibrant platform for researchers, academicians, students, and industry pioneers to engage in meaningful dialogue, share insights, and collectively advance the frontiers of cryptology in India.
               </p>
               <p>
                 The workshop agenda is meticulously crafted to provide a comprehensive exploration of modern cryptography. Participants will engage with eminent experts through a series of invited talks and interactive sessions like lightning talks and poster sessions where budding researchers can present their work. The curriculum will span a wide spectrum of critical topics, including the basics of <strong>Cryptography</strong> and <strong>Cryptanalysis</strong>, <strong>Post-Quantum Cryptography</strong>, <strong>Lightweight Cryptography</strong>, <strong>Public Key Cryptography</strong>, <strong>Quantum Cryptography</strong> and <strong>Multi-Party Computation</strong>. Beyond the sessions, the workshop will offer ample opportunities for networking and collaborative discussions. Our vision is to cultivate a vibrant ecosystem for cryptographic research in India, empowering the next generation of scholars and professionals to shape a secure digital future.
