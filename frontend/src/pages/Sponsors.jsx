@@ -8,7 +8,8 @@ import crsiLogo from '../../assets/sponsors/crsi.png';
 //import dstLogo from '../../assets/sponsors/dst.png';
 import ibitfLogo from '../../assets/sponsors/ibitf.jpeg';
 import iitBhilaiLogo from '../../assets/sponsors/IIT_B.svg';
-import meityLogo from '../../assets/sponsors/meity.png';
+// import meityLogo from '../../assets/sponsors/meity.png';
+import meityLogo from '../../assets/sponsors/meity_1.png';
 
 export default function Sponsors() {
   useEffect(() => {
