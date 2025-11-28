@@ -15,7 +15,7 @@ const schedule = [
     { time: '14:00 - 15:00', event: 'Talk 2: Prof. Dipanwita Roy Chowdhury', chair: '', type: 'misc' },
     { time: '15:00 - 15:15', event: 'Tea/Coffee', chair: '', type: 'snacks' },
     { time: '15:15 - 16:15', event: 'Talk 2 (contd.)', chair: '', type: 'misc' },
-    { time: '16:15 - 17:15', event: 'Talk 3: Dr Girish Mishra', chair: '', type: 'talk' },
+    { time: '16:15 - 17:15', event: 'Talk 3:', chair: '', type: 'talk' },
     { time: '17:15 - 17:30', event: 'Snacks & Tea', chair: '', type: 'snacks' },
     { time: '17:30 - 18:30', event: 'Lightning Talks', chair: '', type: 'misc' },
   ],
