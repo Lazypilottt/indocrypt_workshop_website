@@ -116,14 +116,14 @@ const Home = () => {
 
       {/* About Section */}
       <section className="w-full px-4 py-12 sm:py-16 overflow-hidden">
-        <div 
+        <div
           data-aos="fade-up"
           className="max-w-4xl mx-auto"
         >
           <h2 className="text-xl sm:text-3xl font-bold text-center text-[#2e2a30] mb-8">
             About the Workshop
           </h2>
-          
+
           <GlowingBox className="p-5 sm:p-8">
             <div className="space-y-4 text-[#2e2a30]/90 text-sm sm:text-base leading-relaxed text-justify">
               <p className="first-letter:text-3xl first-letter:font-bold">
@@ -149,7 +149,7 @@ const Home = () => {
       {/* Speakers Section */}
       <section className="w-full px-4 py-12 sm:py-16 overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <h2 
+          <h2
             data-aos="fade-up"
             className="text-xl sm:text-3xl font-bold text-center text-[#2e2a30] mb-8"
           >
@@ -197,7 +197,7 @@ const Home = () => {
       {/* Focus Areas Section */}
       <section className="w-full px-4 py-12 sm:py-16 overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <h2 
+          <h2
             data-aos="fade-up"
             className="text-xl sm:text-3xl font-bold text-center text-[#2e2a30] mb-8"
           >
@@ -224,83 +224,83 @@ const Home = () => {
         </div>
       </section>
 
-                  {/* Important Dates Section */}
-                  <section className="w-full px-4 py-12 sm:py-16 overflow-hidden">
-                    <div className="max-w-4xl mx-auto">
-                      <h2
-                        data-aos="fade-up"
-                        className="text-xl sm:text-3xl font-bold text-center text-[#2e2a30] mb-8"
-                      >
-                        Important Dates
-                      </h2>
-            
-                      <div className="grid sm:grid-cols-4 gap-2 sm:gap-4">
-                        <div
-                          data-aos="fade-right"
-                          className="group cursor-pointer"
-                          onClick={() => navigate('/registration')}
-                        >
-                          <GlowingBox className="p-4 sm:p-6 transition-all duration-300 hover:scale-[1.02]">
-                            <div className="text-center">
-                              <h3 className="text-base sm:text-lg font-semibold text-[#2e2a30] mb-1
+      {/* Important Dates Section */}
+      <section className="w-full px-4 py-12 sm:py-16 overflow-hidden">
+        <div className="max-w-4xl mx-auto">
+          <h2
+            data-aos="fade-up"
+            className="text-xl sm:text-3xl font-bold text-center text-[#2e2a30] mb-8"
+          >
+            Important Dates
+          </h2>
+
+          <div className="grid sm:grid-cols-4 gap-2 sm:gap-4">
+            <div
+              data-aos="fade-right"
+              className="group cursor-pointer"
+              onClick={() => navigate('/registration')}
+            >
+              <GlowingBox className="p-4 sm:p-6 transition-all duration-300 hover:scale-[1.02]">
+                <div className="text-center">
+                  <h3 className="text-base sm:text-lg font-semibold text-[#2e2a30] mb-1
                                            group-hover:text-[#7c3aed] transition-colors duration-300">
-                                Registration
-                              </h3>
-                              <p className="text-sm text-[#2e2a30]/70">November 13-25, 2025</p>
-                            </div>
-                          </GlowingBox>
-                        </div>
-            
-                        <div
-                          data-aos="fade-left"
-                          className="group cursor-pointer"
-                          onClick={() => navigate('#')}
-                        >
-                          <GlowingBox className="p-4 sm:p-6 transition-all duration-300 hover:scale-[1.02]">
-                            <div className="text-center">
-                              <h3 className="text-base sm:text-lg font-semibold text-[#2e2a30] mb-1
+                    Registration
+                  </h3>
+                  <p className="text-sm text-[#2e2a30]/70">November 13-25, 2025</p>
+                </div>
+              </GlowingBox>
+            </div>
+
+            <div
+              data-aos="fade-left"
+              className="group cursor-pointer"
+              onClick={() => navigate('#')}
+            >
+              <GlowingBox className="p-4 sm:p-6 transition-all duration-300 hover:scale-[1.02]">
+                <div className="text-center">
+                  <h3 className="text-base sm:text-lg font-semibold text-[#2e2a30] mb-1
                                            group-hover:text-[#7c3aed] transition-colors duration-300">
-                                Confirmation Mail
-                              </h3>
-                              <p className="text-sm text-[#2e2a30]/70">November 26, 2025</p>
-                            </div>
-                          </GlowingBox>
-                        </div>
-            
-                        <div
-                          data-aos="fade-left"
-                          className="group cursor-pointer"
-                          onClick={() => navigate('/submission-of-poster')}
-                        >
-                          <GlowingBox className="p-4 sm:p-6 transition-all duration-300 hover:scale-[1.02]">
-                            <div className="text-center">
-                              <h3 className="text-base sm:text-lg font-semibold text-[#2e2a30] mb-1
+                    Confirmation Mail
+                  </h3>
+                  <p className="text-sm text-[#2e2a30]/70">November 26, 2025</p>
+                </div>
+              </GlowingBox>
+            </div>
+
+            <div
+              data-aos="fade-left"
+              className="group cursor-pointer"
+              onClick={() => navigate('/submission-of-poster')}
+            >
+              <GlowingBox className="p-4 sm:p-6 transition-all duration-300 hover:scale-[1.02]">
+                <div className="text-center">
+                  <h3 className="text-base sm:text-lg font-semibold text-[#2e2a30] mb-1
                                            group-hover:text-[#7c3aed] transition-colors duration-300">
-                                Poster Submission
-                              </h3>
-                              <p className="text-sm text-[#2e2a30]/70">November 30, 2025</p>
-                            </div>
-                          </GlowingBox>
-                        </div>
-            
-                        <div
-                          data-aos="fade-left"
-                          className="group cursor-pointer"
-                          onClick={() => navigate('/new-program')}
-                        >
-                          <GlowingBox className="p-4 sm:p-6 transition-all duration-300 hover:scale-[1.02]">
-                            <div className="text-center">
-                              <h3 className="text-base sm:text-lg font-semibold text-[#2e2a30] mb-1
+                    Poster Submission
+                  </h3>
+                  <p className="text-sm text-[#2e2a30]/70">December 3, 2025</p>
+                </div>
+              </GlowingBox>
+            </div>
+
+            <div
+              data-aos="fade-left"
+              className="group cursor-pointer"
+              onClick={() => navigate('/new-program')}
+            >
+              <GlowingBox className="p-4 sm:p-6 transition-all duration-300 hover:scale-[1.02]">
+                <div className="text-center">
+                  <h3 className="text-base sm:text-lg font-semibold text-[#2e2a30] mb-1
                                            group-hover:text-[#7c3aed] transition-colors duration-300">
-                                Workshop Dates
-                              </h3>
-                              <p className="text-sm text-[#2e2a30]/70">December 07–09, 2025</p>
-                            </div>
-                          </GlowingBox>
-                        </div>
-                      </div>
-                    </div>
-                  </section>      
+                    Workshop Dates
+                  </h3>
+                  <p className="text-sm text-[#2e2a30]/70">December 07–09, 2025</p>
+                </div>
+              </GlowingBox>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 };

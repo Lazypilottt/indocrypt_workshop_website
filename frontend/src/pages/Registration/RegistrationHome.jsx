@@ -96,7 +96,7 @@ export default function RegistrationHome() {
 
             <GlowingBox className="p-6 hover:bg-white/30 transition-all duration-300">
               <h3 className="text-xl font-bold text-[#2e2a30] mb-3">Poster Submission</h3>
-              <p className="text-[#2e2a30]/80">November 30, 2025</p>
+              <p className="text-[#2e2a30]/80">December 3, 2025</p>
               <p className="text-sm text-[#2e2a30]/60 mt-2">Ready, Set, Submit!</p>
             </GlowingBox>
 

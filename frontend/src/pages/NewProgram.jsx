@@ -8,14 +8,14 @@ const schedule = [
   [
     { time: '09:00 - 10:00', event: 'Registration', chair: '', type: 'misc' },
     { time: '10:00 - 10:45', event: 'Inauguration', chair: '', type: 'misc' },
-    { time: '10:45 - 11:45', event: 'Talk 1: Prof. Bimal Kumar Roy', chair: '', type: 'misc' },
+    { time: '10:45 - 11:45', event: 'Talk 1: "Some Recent Issues in Cryptology" by Prof. Bimal Kumar Roy', chair: '', type: 'misc' },
     { time: '11:45 - 12:00', event: 'Snacks & Tea', chair: '', type: 'snacks' },
     { time: '12:00 - 13:00', event: 'Talk 1 (contd.)', chair: '', type: 'misc' },
     { time: '13:00 - 14:00', event: 'Lunch', chair: '', type: 'lunch' },
     { time: '14:00 - 15:00', event: 'Talk 2: Prof. Dipanwita Roy Chowdhury', chair: '', type: 'misc' },
     { time: '15:00 - 15:15', event: 'Tea/Coffee', chair: '', type: 'snacks' },
     { time: '15:15 - 16:15', event: 'Talk 2 (contd.)', chair: '', type: 'misc' },
-    { time: '16:15 - 17:15', event: 'Talk 3: Dr Girish Mishra', chair: '', type: 'talk' },
+    { time: '16:15 - 17:15', event: 'Talk 3', chair: '', type: 'talk' },
     { time: '17:15 - 17:30', event: 'Snacks & Tea', chair: '', type: 'snacks' },
     { time: '17:30 - 18:30', event: 'Lightning Talks', chair: '', type: 'misc' },
   ],
@@ -24,9 +24,9 @@ const schedule = [
     { time: '09:30 - 10:30', event: 'Talk 4: Dr Shibam Ghosh', chair: '', type: 'talk' },
     { time: '10:30 - 11:30', event: 'Talk 5: Dr Mostafizar Rahman', chair: '', type: 'talk' },
     { time: '11:30 - 12:00', event: 'Snacks & Tea', chair: '', type: 'snacks' },
-    { time: '12:00 - 13:00', event: 'Talk 6: Dr Avijit Dutta', chair: '', type: 'talk' },
+    { time: '12:00 - 13:00', event: 'Talk 6: "Zero knowledge proof and its application" by Dr Avijit Dutta', chair: '', type: 'talk' },
     { time: '13:00 - 14:00', event: 'Lunch', chair: '', type: 'lunch' },
-    { time: '14:00 - 15:00', event: 'Talk 7: Dr Sabyasachi Karati', chair: '', type: 'talk' },
+    { time: '14:00 - 15:00', event: 'Talk 7: "Post-Quantum Digital Signatures from Hash Functions" by Dr Sabyasachi Karati', chair: '', type: 'talk' },
     { time: '15:00 - 15:30', event: 'IBITF Session', chair: '', type: 'misc' },
     { time: '15:30 - 16:30', event: 'Poster Session', chair: '', type: 'misc' },
     { time: '16:30 - 17:00', event: 'Snacks & Tea', chair: '', type: 'snacks' },
@@ -34,7 +34,7 @@ const schedule = [
   ],
   // Dec 09
   [
-    { time: '09:30 - 10:30', event: 'Talk 9: Dr Girish Mishra', chair: '', type: 'talk' },
+    { time: '09:30 - 10:30', event: 'Talk 9: "Exploring Application of Machine Learning in Cryptology" by Dr Girish Mishra', chair: '', type: 'talk' },
     { time: '10:30 - 11:30', event: 'Talk 10: Dr M. Prem Laxman Das', chair: '', type: 'talk' },
     { time: '11:30 - 11:50', event: 'Snacks & Tea', chair: '', type: 'snacks' },
     { time: '11:50 - 12:50', event: 'Talk 11: Prof. Goutam Kumar Paul', chair: '', type: 'talk' },
@@ -84,9 +84,9 @@ export default function NewProgram() {
                   onClick={() => setActiveDay(index)}
                   className={`px-4 sm:px-6 py-3 text-sm sm:text-base font-medium transition-all duration-300
                               ${activeDay === index
-                                ? 'text-[#2e2a30] border-b-2 border-[#7c3aed]'
-                                : 'text-[#2e2a30]/60 hover:text-[#2e2a30]'
-                              }`}
+                      ? 'text-[#2e2a30] border-b-2 border-[#7c3aed]'
+                      : 'text-[#2e2a30]/60 hover:text-[#2e2a30]'
+                    }`}
                 >
                   {day}
                 </button>
@@ -95,11 +95,11 @@ export default function NewProgram() {
 
             <div className="overflow-x-auto">
               <table className="w-full text-sm text-left text-[#2e2a30]">
-                              <thead className="text-xs text-[#2e2a30]/80 uppercase"><tr>
-                                  <th scope="col" className="px-4 py-3 md:w-1/4">Time</th>
-                                  <th scope="col" className="px-4 py-3 md:w-1/2">Event Name</th>
-                                  <th scope="col" className="px-4 py-3 md:w-1/4">Session Chair</th>
-                                </tr></thead>
+                <thead className="text-xs text-[#2e2a30]/80 uppercase"><tr>
+                  <th scope="col" className="px-4 py-3 md:w-1/4">Time</th>
+                  <th scope="col" className="px-4 py-3 md:w-1/2">Event Name</th>
+                  <th scope="col" className="px-4 py-3 md:w-1/4">Session Chair</th>
+                </tr></thead>
                 <tbody>
                   {schedule[activeDay].map((item, index) => (
                     <tr key={index} className="border-b border-white/40 hover:bg-white/10 transition-colors duration-200">
