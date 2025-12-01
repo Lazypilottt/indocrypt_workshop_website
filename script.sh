@@ -2,8 +2,8 @@
 
 cd frontend
 npm i
-npm run dev
-printf "\nSatisfied preview, building now\n"
+# npm run dev
+# printf "\nSatisfied preview, building now\n"
 npm run build
 cd dist
 zip -r website.zip ./

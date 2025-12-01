@@ -24,7 +24,7 @@ const schedule = [
     { time: '09:30 - 10:30', event: 'Talk 4: Dr Shibam Ghosh', chair: '', type: 'talk' },
     { time: '10:30 - 11:30', event: 'Talk 5: Dr Mostafizar Rahman', chair: '', type: 'talk' },
     { time: '11:30 - 12:00', event: 'Snacks & Tea', chair: '', type: 'snacks' },
-    { time: '12:00 - 13:00', event: 'Talk 6: "Zero knowledge proof and its application" by Dr Avijit Dutta', chair: '', type: 'talk' },
+    { time: '12:00 - 13:00', event: 'Talk 6: "Zero Knowledge Proof and its Application" by Dr Avijit Dutta', chair: '', type: 'talk' },
     { time: '13:00 - 14:00', event: 'Lunch', chair: '', type: 'lunch' },
     { time: '14:00 - 15:00', event: 'Talk 7: "Post-Quantum Digital Signatures from Hash Functions" by Dr Sabyasachi Karati', chair: '', type: 'talk' },
     { time: '15:00 - 15:30', event: 'IBITF Session', chair: '', type: 'misc' },
@@ -35,7 +35,7 @@ const schedule = [
   // Dec 09
   [
     { time: '09:30 - 10:30', event: 'Talk 9: "Exploring Application of Machine Learning in Cryptology" by Dr Girish Mishra', chair: '', type: 'talk' },
-    { time: '10:30 - 11:30', event: 'Talk 10: Dr M. Prem Laxman Das', chair: '', type: 'talk' },
+    { time: '10:30 - 11:30', event: 'Talk 10: "Unclonability in Cryptography: Quantum Credentials" by Dr M. Prem Laxman Das', chair: '', type: 'talk' },
     { time: '11:30 - 11:50', event: 'Snacks & Tea', chair: '', type: 'snacks' },
     { time: '11:50 - 12:50', event: 'Talk 11: Prof. Goutam Kumar Paul', chair: '', type: 'talk' },
     { time: '12:50 - 13:45', event: 'Panel Discussion', chair: '', type: 'misc' },
