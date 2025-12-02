@@ -127,7 +127,7 @@ const Home = () => {
           <GlowingBox className="p-5 sm:p-8">
             <div className="space-y-4 text-[#2e2a30]/90 text-sm sm:text-base leading-relaxed text-justify">
               <p className="first-letter:text-3xl first-letter:font-bold">
-                <strong>Indian Institute of Technology Bhilai</strong> and the <strong>Cryptology Research Society of India (CRSI)</strong> are proud to present the <strong>National Workshop on Cryptology (NWC 2025)</strong>. As the flagship annual event of CRSI, this workshop serves as a premier national forum dedicated to uniting the brightest minds in cryptology and information security. The event is being organized by <strong>
+                <strong>Department of Computer Science and Engineering, Indian Institute of Technology Bhilai</strong> and the <strong>Cryptology Research Society of India (CRSI)</strong> are proud to present the <strong>National Workshop on Cryptology (NWC 2025)</strong>. As the flagship annual event of CRSI, this workshop serves as a premier national forum dedicated to uniting the brightest minds in cryptology and information security. The event is being organized by <strong>
                   <a
                     href="http://de.ci.phe.red/"
                     target="_blank"
