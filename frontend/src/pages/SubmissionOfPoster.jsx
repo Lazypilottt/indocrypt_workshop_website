@@ -55,13 +55,27 @@ export default function SubmissionOfPoster() {
                 </div>
               </div>
 
-              <p>
-                If you are interested in presenting, please submit your preference (poster or lightning talk) and a brief abstract through the form that will be shared with you shortly.
-              </p>
+              <div className="my-8 space-y-4">
+                <p>
+                  We invite interested participants to submit their preference for either a poster presentation or a lightning talk.
+                </p>
+                <p className="text-[#2e2a30]/90">
+                  Please ensure your submission includes a <strong>maximum one-page abstract</strong> of your poster in PDF format.
+                </p>
+                <p className="font-bold text-[#7c3aed]">
+                  Deadline to submit: 11:59 pm on 3rd of December 2025
+                </p>
+              </div>
 
-              <div className="bg-amber-100 border-l-4 border-amber-500 text-amber-900 p-4 rounded-r shadow-sm my-6">
-                <p className="font-bold">Deadline to submit:</p>
-                <p>11:59 pm on 3rd of December 2025</p>
+              <div className="mb-12 text-center">
+                <a
+                  href="https://forms.gle/RCu8iUfTSqqbDcULA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-black text-white py-3 px-6 rounded-lg shadow-[0_0_15px_rgba(124,58,237,0.8)] hover:scale-105 hover:shadow-[0_0_25px_rgba(124,58,237,1)] transition-all duration-300 ease-in-out font-semibold"
+                >
+                  Submit Poster
+                </a>
               </div>
 
               <p className="font-medium text-[#2e2a30]/80 italic">
