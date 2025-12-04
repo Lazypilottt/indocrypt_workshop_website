@@ -57,7 +57,7 @@ export default function NewProgram() {
               <table className="w-full text-sm text-left text-[#2e2a30]">
                 <thead className="text-xs text-[#2e2a30]/80 uppercase"><tr>
                   <th scope="col" className="px-4 py-3">Time</th>
-                  <th scope="col" className="px-4 py-3">Event Name</th>
+                  <th scope="col" className="px-4 py-3">Event</th>
                   <th scope="col" className="px-4 py-3">Speaker</th>
                   <th scope="col" className="px-4 py-3">Session Chair</th>
                 </tr></thead>
@@ -68,7 +68,7 @@ export default function NewProgram() {
                       <td className="px-4 py-4 font-semibold">
                         <div className="flex items-center">
                           {getTypeIcon(item.type)}
-                          <span>{item.event}</span>
+                          <span className={item.type === 'talk' ? 'italic' : ''}>{item.event}</span>
                         </div>
                       </td>
                       <td className="px-4 py-4">{item.speaker}</td>
