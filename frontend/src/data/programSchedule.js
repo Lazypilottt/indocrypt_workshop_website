@@ -20,13 +20,13 @@ export const schedule = [
         { time: '09:30 - 10:30', event: 'Talk 4: "Zero Knowledge Proof and its Application"', speaker: 'Dr Avijit Dutta', chair: 'Dr Sabyasachi Karati', type: 'talk' },
         { time: '10:30 - 11:30', event: 'Talk 5: "Key Committing Attacks against AES-based AEAD Schemes"', speaker: 'Dr Mostafizar Rahman', chair: 'Dr Sabyasachi Karati', type: 'talk' },
         { time: '11:30 - 12:00', event: 'Snacks & Tea', speaker: '', chair: '', type: 'snacks' },
-        { time: '12:00 - 13:00', event: 'Talk 6: "Security and Privacy in Machine Learning"', speaker: 'Dr Nishanth Chandran', chair: 'Dr Dhiman Saha', type: 'talk' },
+        { time: '12:00 - 13:00', event: 'Talk 6: "Security and Privacy in Machine Learning" (Virtual Mode)', speaker: 'Dr Nishanth Chandran', chair: 'Dr Dhiman Saha', type: 'talk' },
         { time: '13:00 - 14:00', event: 'Lunch', speaker: '', chair: '', type: 'lunch' },
         { time: '14:00 - 15:00', event: 'Talk 7: "Post-Quantum Digital Signatures from Hash Functions"', speaker: 'Dr Sabyasachi Karati', chair: 'Dr R Kabaleeshwaran', type: 'talk' },
         { time: '15:00 - 15:30', event: 'Session by IIT Bhilai Innovation and Technology Foundation', speaker: 'Mr. Prashant Mathur (CEO)', chair: 'Dr R Kabaleeshwaran', type: 'misc' },
         { time: '15:30 - 16:30', event: 'Poster Session', speaker: '', chair: '', type: 'misc' },
         { time: '16:30 - 17:00', event: 'Snacks & Tea', speaker: '', chair: '', type: 'snacks' },
-        { time: '17:00 - 18:00', event: 'Talk 8: "Finding d-differential S-boxes with Constraint Programming"', speaker: 'Dr Raghvendra Singh Rohit', chair: 'Dr Subidh Ali', type: 'talk' },
+        { time: '17:00 - 18:00', event: 'Talk 8: "Finding d-differential S-boxes with Constraint Programming" (Virtual Mode)', speaker: 'Dr Raghvendra Singh Rohit', chair: 'Dr Subidh Ali', type: 'talk' },
     ],
     // Dec 09
     [
