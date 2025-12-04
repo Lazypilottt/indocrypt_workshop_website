@@ -22,6 +22,7 @@ import santanu from "../../assets/speakers/shantanu.jpg"; // New import
 import skpal from "../../assets/speakers/skpal.png"; // New import
 import gm from "../../assets/speakers/gm.jpeg"; // New import
 import nc from "../../assets/speakers/nc.jpeg"; // New import
+import rsr from "../../assets/speakers/rsr.jpeg"; // New import
 
 import { getCurrentEvent } from "../data/programSchedule";
 import { useState } from "react";
@@ -72,7 +73,8 @@ const Home = () => {
     // { name: "Prof. Santanu Sarkar", university: "IIT Madras", image: santanu },
     { name: "Prof. Goutam Paul", university: "ISI Kolkata", image: paul },
     { name: "Dr. Girish Mishra", university: "SAG DRDO", image: gm },
-    { name: "Dr Nishant Chandran", university: "Microsoft", image: nc },
+    { name: "Dr Nishant Chandran", university: "Microsoft Research India", image: nc },
+    { name: "Dr Raghvendra Singh Rohit", university: "IIT Roorkee", image: rsr },
     { name: "Dr. Avijit Dutta", university: "TCG Crest", image: avijitImg },
     { name: "Dr. M. Prem Laxman Das", university: "SETS India", image: prem },
     // { name: "Dr. Saibal K. Pal", university: "SAG DRDO", image: skpal },
@@ -230,7 +232,7 @@ const Home = () => {
             Distinguished Speakers
           </h2>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
             {speakers.map((speaker, index) => (
               <div
                 key={index}
