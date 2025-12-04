@@ -23,8 +23,13 @@ import skpal from "../../assets/speakers/skpal.png"; // New import
 import gm from "../../assets/speakers/gm.jpeg"; // New import
 import nc from "../../assets/speakers/nc.jpeg"; // New import
 
+import { getCurrentEvent } from "../data/programSchedule";
+import { useState } from "react";
+
 const Home = () => {
   const navigate = useNavigate();
+  const [isLive, setIsLive] = useState(false);
+  const [currentEvent, setCurrentEvent] = useState(null);
 
   useEffect(() => {
     AOS.init({
@@ -34,7 +39,31 @@ const Home = () => {
       offset: 100,
       disable: window.innerWidth < 768
     });
-  }, []);
+
+    // Check initially if we should be live
+    const event = getCurrentEvent();
+    if (event) {
+      setIsLive(true);
+      setCurrentEvent(event);
+    }
+
+    // Set up an interval to update the current event if we are live
+    let interval;
+    if (isLive) {
+      interval = setInterval(() => {
+        const event = getCurrentEvent();
+        setCurrentEvent(event);
+      }, 3000); // Check every minute
+    }
+
+    return () => clearInterval(interval);
+  }, [isLive]);
+
+  const handleCountdownComplete = () => {
+    setIsLive(true);
+    const event = getCurrentEvent();
+    setCurrentEvent(event);
+  };
 
   const speakers = [
     { name: "Prof. Bimal Kumar Roy", university: "Cryptology Research Society of India (CRSI)", image: brkImg }, // New speaker
@@ -88,7 +117,50 @@ const Home = () => {
           </div>
 
           <div className="mt-6 sm:mt-8">
-            <Countdown targetDate="2025-12-07T09:00:00+05:30" />
+            {!isLive ? (
+              <>
+                {/* <Countdown targetDate="2025-12-07T09:00:00+05:30" /> */}
+                <Countdown
+                  targetDate="2025-12-07T09:00:00+05:30"
+                  // targetDate="2025-12-04T13:00:00+05:30"
+                  onComplete={handleCountdownComplete}
+                />
+              </>
+            ) : (
+              <div className="text-center animate-fade-in">
+                <div className="flex items-center justify-center gap-2 mb-4">
+                  <span className="relative flex h-3 w-3">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                  </span>
+                  <h2 className="text-xl font-bold text-[#7c3aed] uppercase tracking-wider">
+                    Program Updates
+                  </h2>
+                </div>
+
+                {currentEvent ? (
+                  <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 border border-[#7c3aed]/20">
+                    <div className="text-sm font-semibold text-[#7c3aed] mb-1">
+                      {currentEvent.day} • {currentEvent.time}
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#2e2a30] mb-2">
+                      {currentEvent.event}
+                    </h3>
+                    {currentEvent.chair && (
+                      <p className="text-sm text-[#2e2a30]/70">
+                        Session Chair: {currentEvent.chair}
+                      </p>
+                    )}
+                  </div>
+                ) : (
+                  <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 border border-[#7c3aed]/20">
+                    <p className="text-lg text-[#2e2a30]/80">
+                      No active session right now. Check the full program below.
+                    </p>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
 
           <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row justify-center gap-3">
