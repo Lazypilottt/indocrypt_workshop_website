@@ -32,6 +32,27 @@ export default function Photostream() {
 
     const [selectedPhoto, setSelectedPhoto] = React.useState(null);
 
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (!selectedPhoto) return;
+
+            if (e.key === 'ArrowRight') {
+                const currentIndex = photos.findIndex((p) => p.id === selectedPhoto.id);
+                const nextIndex = (currentIndex + 1) % photos.length;
+                setSelectedPhoto(photos[nextIndex]);
+            } else if (e.key === 'ArrowLeft') {
+                const currentIndex = photos.findIndex((p) => p.id === selectedPhoto.id);
+                const prevIndex = (currentIndex - 1 + photos.length) % photos.length;
+                setSelectedPhoto(photos[prevIndex]);
+            } else if (e.key === 'Escape') {
+                setSelectedPhoto(null);
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [selectedPhoto, photos]);
+
     return (
         <div className="min-h-screen flex flex-col pt-[40px]">
             <main className="flex-grow px-4 md:px-8 pb-12">
@@ -97,6 +118,31 @@ export default function Photostream() {
                         >
                             &times;
                         </button>
+
+                        {/* Navigation Buttons for better UX */}
+                        <button
+                            className="absolute left-4 top-1/2 -translate-y-1/2 text-white/50 hover:text-white text-6xl transition-colors hidden md:block"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                const currentIndex = photos.findIndex((p) => p.id === selectedPhoto.id);
+                                const prevIndex = (currentIndex - 1 + photos.length) % photos.length;
+                                setSelectedPhoto(photos[prevIndex]);
+                            }}
+                        >
+                            &#8249;
+                        </button>
+                        <button
+                            className="absolute right-4 top-1/2 -translate-y-1/2 text-white/50 hover:text-white text-6xl transition-colors hidden md:block"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                const currentIndex = photos.findIndex((p) => p.id === selectedPhoto.id);
+                                const nextIndex = (currentIndex + 1) % photos.length;
+                                setSelectedPhoto(photos[nextIndex]);
+                            }}
+                        >
+                            &#8250;
+                        </button>
+
                         <img
                             src={selectedPhoto.src}
                             alt={selectedPhoto.alt}
