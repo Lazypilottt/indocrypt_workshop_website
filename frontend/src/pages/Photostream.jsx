@@ -22,12 +22,12 @@ export default function Photostream() {
 
     // Placeholder for photos. In the future, this can be fetched from an API or a static list.
     const photos = [
-        { id: 1, src: bg1, alt: 'Workshop Photo 1', caption: 'Workshop Highlights' },
-        { id: 2, src: bg2, alt: 'Workshop Photo 2', caption: 'Deciphered Event' },
-        { id: 3, src: bg3, alt: 'Workshop Photo 3', caption: 'Poster Submission' },
-        { id: 4, src: bg4, alt: 'Workshop Photo 4', caption: 'Event Schedule' },
-        { id: 5, src: bg5, alt: 'Workshop Photo 5', caption: 'Event Schedule' },
-        { id: 6, src: bg6, alt: 'Workshop Photo 6', caption: 'Event Schedule' },
+        // { id: 1, src: bg1, alt: 'Workshop Photo 1', caption: 'Workshop Highlights', label: 'Session 1' },
+        // { id: 2, src: bg2, alt: 'Workshop Photo 2', caption: 'Deciphered Event', label: 'Session 2' },
+        // { id: 3, src: bg3, alt: 'Workshop Photo 3', caption: 'Poster Submission', label: 'Session 3' },
+        // { id: 4, src: bg4, alt: 'Workshop Photo 4', caption: 'Event Schedule', label: 'Session 4' },
+        // { id: 5, src: bg5, alt: 'Workshop Photo 5', caption: 'Event Schedule', label: 'Session 5' },
+        // { id: 6, src: bg6, alt: 'Workshop Photo 6', caption: 'Event Schedule', label: 'Session 6' },
     ];
 
     const [selectedPhoto, setSelectedPhoto] = React.useState(null);
@@ -68,7 +68,7 @@ export default function Photostream() {
                     {photos.length === 0 ? (
                         <div className="flex justify-center" data-aos="fade-up">
                             <GlowingBox className="p-8 text-center max-w-2xl">
-                                <p className="text-xl text-gray-300">
+                                <p className="text-xl text-black font-medium">
                                     Photos from the workshop sessions will be uploaded here soon. Stay tuned!
                                 </p>
                             </GlowingBox>
@@ -88,6 +88,9 @@ export default function Photostream() {
                                             alt={photo.alt}
                                             className="w-full h-full object-cover"
                                         />
+                                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-900/10 to-pink-900/10 backdrop-blur-sm text-white px-6 py-2 rounded-full border border-white/10 shadow-lg z-10 transition-all duration-300 group-hover:scale-105">
+                                            <span className="text-sm font-medium tracking-wide whitespace-nowrap">{photo.label}</span>
+                                        </div>
                                         {/* Hover Overlay */}
                                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
                                             <span className="opacity-0 group-hover:opacity-100 text-white font-semibold transition-opacity duration-300">
@@ -148,6 +151,11 @@ export default function Photostream() {
                             alt={selectedPhoto.alt}
                             className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
                         />
+
+                        {/* Session Label in Lightbox */}
+                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-900/10 to-pink-900/10 backdrop-blur-sm text-white px-8 py-3 rounded-full border border-white/10 shadow-lg z-20 transition-all duration-300">
+                            <span className="text-lg font-medium tracking-wide whitespace-nowrap">{selectedPhoto.label}</span>
+                        </div>
                     </div>
                 </div>
             )}
