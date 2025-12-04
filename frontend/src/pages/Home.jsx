@@ -21,6 +21,7 @@ import paul from "../../assets/speakers/paul.png"; // New import
 import santanu from "../../assets/speakers/shantanu.jpg"; // New import
 import skpal from "../../assets/speakers/skpal.png"; // New import
 import gm from "../../assets/speakers/gm.jpeg"; // New import
+import nc from "../../assets/speakers/nc.jpeg"; // New import
 
 const Home = () => {
   const navigate = useNavigate();
@@ -42,6 +43,7 @@ const Home = () => {
     // { name: "Prof. Santanu Sarkar", university: "IIT Madras", image: santanu },
     { name: "Prof. Goutam Paul", university: "ISI Kolkata", image: paul },
     { name: "Dr. Girish Mishra", university: "SAG DRDO", image: gm },
+    { name: "Dr Nishant Chandran", university: "Microsoft", image: nc },
     { name: "Dr. Avijit Dutta", university: "TCG Crest", image: avijitImg },
     { name: "Dr. M. Prem Laxman Das", university: "SETS India", image: prem },
     // { name: "Dr. Saibal K. Pal", university: "SAG DRDO", image: skpal },

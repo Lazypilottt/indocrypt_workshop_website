@@ -23,6 +23,7 @@ export default function OrganisingCommittee() {
     'Madhurima Das',
     'Prathamesh Ram',
     'Pratyut',
+    'Rohan Madhukar Wasnik',
     'Soumen Jana',
     'Tilesh Srivastav',
     'Vipin Kumar',

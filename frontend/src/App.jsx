@@ -14,6 +14,7 @@ import Venue from './pages/Travel/Venue';
 import Sponsors from './pages/Sponsors';
 import SubmissionOfPoster from './pages/SubmissionOfPoster';
 import OrganisingCommittee from './pages/OrganisingCommittee';
+import Photostream from './pages/Photostream';
 import ErrorPage from './pages/ErrorPage';
 import BackgroundCarousel from './components/BackgroundCarousel';
 import FloatingButton from './components/FloatingButton';
@@ -64,16 +65,15 @@ export default function App() {
       <ScrollToTop />
       <div className="flex flex-col relative overflow-hidden">
         <div ref={headerRef}>
-          <Header/>
+          <Header />
         </div>
 
         {/* Placeholder for the navbar to prevent content jump */}
         <div style={{ height: navbarHeight > 0 ? `${navbarHeight}px` : 'auto' }}>
           <div
             ref={navbarContainerRef}
-            className={`z-40 w-full transition-shadow duration-300 ${
-              isSticky ? 'fixed top-0' : 'relative'
-            }`}
+            className={`z-40 w-full transition-shadow duration-300 ${isSticky ? 'fixed top-0' : 'relative'
+              }`}
           >
             <Navbar />
           </div>
@@ -87,14 +87,15 @@ export default function App() {
                 <Home />
               </div>
             } />
-            <Route path="/registration" element={<RegistrationHome/>} />
-            <Route path="/registration/code-of-conduct" element={<CodeOfConduct/>} />
-            <Route path="/new-program" element={<NewProgram/>} />
-            <Route path="/travel" element={<TravelHome/>} />
-            <Route path="/travel/venue" element={<Venue/>} />
-            <Route path="/sponsors" element={<Sponsors/>} />
+            <Route path="/registration" element={<RegistrationHome />} />
+            <Route path="/registration/code-of-conduct" element={<CodeOfConduct />} />
+            <Route path="/new-program" element={<NewProgram />} />
+            <Route path="/travel" element={<TravelHome />} />
+            <Route path="/travel/venue" element={<Venue />} />
+            <Route path="/sponsors" element={<Sponsors />} />
             <Route path="/submission-of-poster" element={<SubmissionOfPoster />} />
             <Route path="/organising-committee" element={<OrganisingCommittee />} />
+            <Route path="/photostream" element={<Photostream />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </div>
