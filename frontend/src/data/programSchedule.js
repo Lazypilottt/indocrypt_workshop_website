@@ -6,7 +6,8 @@ export const schedule = [
         { time: '10:45 - 11:45', event: 'Talk 1: "Some Recent Issues in Cryptology" by Prof. Bimal Kumar Roy', chair: 'Prof. Dipanwita Roy Chowdhury', type: 'misc' },
         { time: '11:45 - 12:00', event: 'Snacks & Tea', chair: '', type: 'snacks' },
         { time: '12:00 - 13:00', event: 'Talk 1: "Some Recent Issues in Cryptology" by Prof. Bimal Kumar Roy (contd.)', chair: 'Prof. Dipanwita Roy Chowdhury', type: 'misc' },
-        { time: '13:00 - 14:00', event: 'Lunch', chair: '', type: 'lunch' },
+        { time: '13:00 - 13:05', event: 'Workshop Group Photo', chair: '', type: 'misc' },
+        { time: '13:05 - 14:00', event: 'Lunch', chair: '', type: 'lunch' },
         { time: '14:00 - 15:00', event: 'Talk 2: Prof. Dipanwita Roy Chowdhury', chair: 'Dr Souradyuti Paul ', type: 'misc' },
         { time: '15:00 - 15:15', event: 'Tea/Coffee', chair: '', type: 'snacks' },
         { time: '15:15 - 16:15', event: 'Talk 2 (contd.)', chair: 'Dr Souradyuti Paul', type: 'misc' },
@@ -25,7 +26,7 @@ export const schedule = [
         { time: '15:00 - 15:30', event: 'Session by IIT Bhilai Innovation and Technology Foundation CEO Mr. Prashant Mathur', chair: 'Dr R Kabaleeshwaran', type: 'misc' },
         { time: '15:30 - 16:30', event: 'Poster Session', chair: '', type: 'misc' },
         { time: '16:30 - 17:00', event: 'Snacks & Tea', chair: '', type: 'snacks' },
-        { time: '17:00 - 18:00', event: 'Talk 8: by Dr Raghvendra Singh Rohit', chair: 'Dr Subidh Ali', type: 'talk' },
+        { time: '17:00 - 18:00', event: 'Talk 8: "Finding $d$-differential S-boxes with Constraint Programming" by Dr Raghvendra Singh Rohit', chair: 'Dr Subidh Ali', type: 'talk' },
     ],
     // Dec 09
     [
