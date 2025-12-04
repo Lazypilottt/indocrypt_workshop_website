@@ -19,7 +19,7 @@ export const schedule = [
         { time: '09:30 - 10:30', event: 'Talk 4: "Zero Knowledge Proof and its Application" by Dr Avijit Dutta', chair: 'Dr Sabyasachi Karati', type: 'talk' },
         { time: '10:30 - 11:30', event: 'Talk 5: "Key Committing Attacks against AES-based AEAD Schemes" by Dr Mostafizar Rahman', chair: 'Dr Sabyasachi Karati', type: 'talk' },
         { time: '11:30 - 12:00', event: 'Snacks & Tea', chair: '', type: 'snacks' },
-        { time: '12:00 - 13:00', event: 'Talk 6: "Security and Privacy in Machine Learning" by Dr Nishanth chandran', chair: 'Dr Dhiman Saha', type: 'talk' },
+        { time: '12:00 - 13:00', event: 'Talk 6: "Security and Privacy in Machine Learning" by Dr Nishanth Chandran', chair: 'Dr Dhiman Saha', type: 'talk' },
         { time: '13:00 - 14:00', event: 'Lunch', chair: '', type: 'lunch' },
         { time: '14:00 - 15:00', event: 'Talk 7: "Post-Quantum Digital Signatures from Hash Functions" by Dr Sabyasachi Karati', chair: 'Dr R Kabaleeshwaran', type: 'talk' },
         { time: '15:00 - 15:30', event: 'Session by IIT Bhilai Innovation and Technology Foundation CEO Mr. Prashant Mathur', chair: 'Dr R Kabaleeshwaran', type: 'misc' },
