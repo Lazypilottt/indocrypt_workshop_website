@@ -89,7 +89,7 @@ export default function App() {
             } />
             <Route path="/registration" element={<RegistrationHome />} />
             <Route path="/registration/code-of-conduct" element={<CodeOfConduct />} />
-            <Route path="/new-program" element={<NewProgram />} />
+            <Route path="/program" element={<NewProgram />} />
             <Route path="/travel" element={<TravelHome />} />
             <Route path="/travel/venue" element={<Venue />} />
             <Route path="/sponsors" element={<Sponsors />} />

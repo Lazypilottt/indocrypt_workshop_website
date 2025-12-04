@@ -19,12 +19,13 @@ export default function Footer() {
             <h3 className="text-xl font-bold text-[#2e2a30]">Quick Links</h3>
             <ul className="space-y-2">
               <li><Link to="/" className={`text-[#2e2a30]/70 hover:text-[#7c3aed] transition-colors duration-300 ${location.pathname === '/' ? 'text-[#7c3aed]' : ''}`}>Home</Link></li>
-              <li><Link to="/new-program" className={`text-[#2e2a30]/70 hover:text-[#7c3aed] transition-colors duration-300 ${location.pathname === '/new-program' ? 'text-[#7c3aed]' : ''}`}>Program</Link></li>
+              <li><Link to="/program" className={`text-[#2e2a30]/70 hover:text-[#7c3aed] transition-colors duration-300 ${location.pathname === '/program' ? 'text-[#7c3aed]' : ''}`}>Program</Link></li>
               <li><Link to="/organising-committee" className={`text-[#2e2a30]/70 hover:text-[#7c3aed] transition-colors duration-300 ${location.pathname === '/organising-committee' ? 'text-[#7c3aed]' : ''}`}>Organising Committee</Link></li>
               <li><Link to="/registration" className={`text-[#2e2a30]/70 hover:text-[#7c3aed] transition-colors duration-300 ${location.pathname === '/registration' ? 'text-[#7c3aed]' : ''}`}>Registration</Link></li>
               <li><Link to="/submission-of-poster" className={`text-[#2e2a30]/70 hover:text-[#7c3aed] transition-colors duration-300 ${location.pathname === '/submission-of-poster' ? 'text-[#7c3aed]' : ''}`}>Poster Submission</Link></li>
               <li><Link to="/travel/venue" className={`text-[#2e2a30]/70 hover:text-[#7c3aed] transition-colors duration-300 ${location.pathname === '/travel/venue' ? 'text-[#7c3aed]' : ''}`}>Venue</Link></li>
               <li><Link to="/sponsors" className={`text-[#2e2a30]/70 hover:text-[#7c3aed] transition-colors duration-300 ${location.pathname === '/sponsors' ? 'text-[#7c3aed]' : ''}`}>Sponsors</Link></li>
+              <li><Link to="/photostream" className={`text-[#2e2a30]/70 hover:text-[#7c3aed] transition-colors duration-300 ${location.pathname === '/photostream' ? 'text-[#7c3aed]' : ''}`}>Photostream</Link></li>
             </ul>
           </div>
           <div className="space-y-4">

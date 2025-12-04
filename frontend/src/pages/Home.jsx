@@ -178,7 +178,7 @@ const Home = () => {
                             opacity-0 group-hover:opacity-100 transition-opacity duration-500"/>
             </Link>
             <Link
-              to="/new-program"
+              to="/program"
               className="px-6 py-2.5 rounded-xl bg-white/80 text-[#2e2a30] font-medium
                        text-sm sm:text-base tracking-wide text-center backdrop-blur-sm
                        border border-[#7c3aed]/20 transition-all duration-300
@@ -362,7 +362,7 @@ const Home = () => {
             <div
               data-aos="fade-left"
               className="group cursor-pointer"
-              onClick={() => navigate('/new-program')}
+              onClick={() => navigate('/program')}
             >
               <GlowingBox className="p-4 sm:p-6 transition-all duration-300 hover:scale-[1.02]">
                 <div className="text-center">

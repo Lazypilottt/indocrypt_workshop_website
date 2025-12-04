@@ -56,9 +56,10 @@ export default function NewProgram() {
             <div className="overflow-x-auto">
               <table className="w-full text-sm text-left text-[#2e2a30]">
                 <thead className="text-xs text-[#2e2a30]/80 uppercase"><tr>
-                  <th scope="col" className="px-4 py-3 md:w-1/4">Time</th>
-                  <th scope="col" className="px-4 py-3 md:w-1/2">Event Name</th>
-                  <th scope="col" className="px-4 py-3 md:w-1/4">Session Chair</th>
+                  <th scope="col" className="px-4 py-3">Time</th>
+                  <th scope="col" className="px-4 py-3">Event Name</th>
+                  <th scope="col" className="px-4 py-3">Speaker</th>
+                  <th scope="col" className="px-4 py-3">Session Chair</th>
                 </tr></thead>
                 <tbody>
                   {schedule[activeDay].map((item, index) => (
@@ -70,6 +71,7 @@ export default function NewProgram() {
                           <span>{item.event}</span>
                         </div>
                       </td>
+                      <td className="px-4 py-4">{item.speaker}</td>
                       <td className="px-4 py-4">{item.chair}</td>
                     </tr>
                   ))}
