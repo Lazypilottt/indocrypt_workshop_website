@@ -33,7 +33,7 @@ export const schedule = [
         { time: '09:30 - 10:30', event: 'Exploring Application of Machine Learning in Cryptology', speaker: 'Dr Girish Mishra', chair: 'Dr Avik Chakraborti', type: 'talk' },
         { time: '10:30 - 11:30', event: 'Unclonability in Cryptography: Quantum Credentials', speaker: 'Dr M. Prem Laxman Das', chair: 'Dr Avik Chakraborti', type: 'talk' },
         { time: '11:30 - 11:50', event: 'High Tea', speaker: '', chair: '', type: 'snacks' },
-        { time: '11:50 - 12:50', event: 'TBD', speaker: 'Prof. Goutam Kumar Paul', chair: 'Dr M. Prem Laxman Das', type: 'talk' },
+        { time: '11:50 - 12:50', event: 'Quantum Key Distribution', speaker: 'Prof. Goutam Kumar Paul', chair: 'Dr M. Prem Laxman Das', type: 'talk' },
         { time: '12:50 - 13:45', event: 'Panel Discussion', speaker: '', chair: '', type: 'misc' },
         { time: '13:45 - 14:00', event: 'Valedictory Session', speaker: '', chair: '', type: 'misc' },
         { time: '14:00 - 15:00', event: 'Lunch', speaker: '', chair: '', type: 'lunch' },
