@@ -89,7 +89,7 @@ export default function SubmissionOfPoster() {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <h3 className="font-bold text-[#2e2a30] text-lg">Dr Shibam Ghosh</h3>
+                    <h3 className="font-bold text-[#2e2a30] text-lg">Dr. Shibam Ghosh</h3>
                   </div>
 
                   {/* Sahiba */}
@@ -101,7 +101,7 @@ export default function SubmissionOfPoster() {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <h3 className="font-bold text-[#2e2a30] text-lg">Dr Sahiba Suryawanshi</h3>
+                    <h3 className="font-bold text-[#2e2a30] text-lg">Dr. Sahiba Suryawanshi</h3>
                   </div>
                 </div>
               </div>
