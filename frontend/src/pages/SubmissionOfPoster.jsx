@@ -55,30 +55,102 @@ export default function SubmissionOfPoster() {
                 </div>
               </div>
 
-              <div className="my-8 space-y-4">
+              {/* <div className="my-8 space-y-4">
                 <p>
                   We invite interested participants to submit their preference for either a poster presentation or a lightning talk.
                 </p>
                 <p className="text-[#2e2a30]/90">
                   Please ensure your submission includes a <strong>maximum one-page abstract</strong> of your poster in PDF format.
                 </p>
-                <p className="font-bold text-[#7c3aed]">
-                  Deadline to submit: 11:59 pm on 3rd of December 2025
+              </div> */}
+
+              {/* Poster Submission Committee */}
+              <div className="bg-white/40 rounded-xl p-6 border-l-4 border-[#7c3aed] my-8">
+                <h2 className="text-xl font-bold text-[#2e2a30] mb-6">Poster Review Committee</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                  {/* Mustak */}
+                  <div className="flex flex-col items-center text-center group">
+                    <div className="w-40 h-40 mb-4 rounded-full overflow-hidden border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300">
+                      <img
+                        src={new URL('../../assets/committee/Mostafizar.jpg', import.meta.url).href}
+                        alt="Mustak"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <h3 className="font-bold text-[#2e2a30] text-lg">Dr. Mostafizar Rahman</h3>
+                  </div>
+
+                  {/* Shibam */}
+                  <div className="flex flex-col items-center text-center group">
+                    <div className="w-40 h-40 mb-4 rounded-full overflow-hidden border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300">
+                      <img
+                        src={new URL('../../assets/committee/shiman.png', import.meta.url).href}
+                        alt="Shibam"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <h3 className="font-bold text-[#2e2a30] text-lg">Dr Shibam Ghosh</h3>
+                  </div>
+
+                  {/* Sahiba */}
+                  <div className="flex flex-col items-center text-center group">
+                    <div className="w-40 h-40 mb-4 rounded-full overflow-hidden border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300">
+                      <img
+                        src={new URL('../../assets/committee/sahiba.jpeg', import.meta.url).href}
+                        alt="Sahiba"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <h3 className="font-bold text-[#2e2a30] text-lg">Dr Sahiba Suryawanshi</h3>
+                  </div>
+                </div>
+              </div>
+
+              {/* Accepted Posters */}
+              <div className="my-8 ">
+                <h2 className="text-xl font-bold text-[#2e2a30] mb-4">Accepted Posters</h2>
+                <p className="mb-4 text-[#2e2a30]/90 font-medium">
+                  Congratulations for these 8 posters to be accepted for the presentation!
                 </p>
+                <div className="bg-white/40 rounded-xl p-6 shadow-sm">
+                  <ul className="space-y-3 text-[#2e2a30]/90">
+                    <li className="flex items-start">
+                      <span className="mr-2 text-[#7c3aed] font-bold">•</span>
+                      <span>LibIntel: AI-Powered Analysis of Statically Linked Libraries in Linux Binaries</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-2 text-[#7c3aed] font-bold">•</span>
+                      <span>From Proofs to Signatures</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-2 text-[#7c3aed] font-bold">•</span>
+                      <span>Hybrid Meta-Heuristic based Feature Selection Mechanism for Cyber-Attack Detection in IoT-enabled Networks</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-2 text-[#7c3aed] font-bold">•</span>
+                      <span>Adaptive Modulation for OAM-based Quantum Key Distribution in Underwater Channels</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-2 text-[#7c3aed] font-bold">•</span>
+                      <span>Post-Quantum Cryptosystems over Euclidean and Hybrid Lattices</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-2 text-[#7c3aed] font-bold">•</span>
+                      <span>Federated Learning–Based Fake gNB Detection in 5G Networks & Beyond</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-2 text-[#7c3aed] font-bold">•</span>
+                      <span>Secure Multiparty Computation</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-2 text-[#7c3aed] font-bold">•</span>
+                      <span>Endpoint Security for Corporate Infrastructure with Windows Devices</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
 
-              <div className="mb-12 text-center">
-                <a
-                  href="https://forms.gle/RCu8iUfTSqqbDcULA"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-black text-white py-3 px-6 rounded-lg shadow-[0_0_15px_rgba(124,58,237,0.8)] hover:scale-105 hover:shadow-[0_0_25px_rgba(124,58,237,1)] transition-all duration-300 ease-in-out font-semibold"
-                >
-                  Submit Poster
-                </a>
-              </div>
-
-              <p className="font-medium text-[#2e2a30]/80 italic">
+              {/* <p className="font-medium text-[#2e2a30]/80 italic">
                 Feel free to ask here if you have any questions.
               </p>
 
@@ -88,7 +160,7 @@ export default function SubmissionOfPoster() {
               <p className="font-semibold mt-4">
                 Warm regards,<br />
                 NWC 2025 Organizing Committee
-              </p>
+              </p> */}
             </div>
           </GlowingBox>
         </div>
