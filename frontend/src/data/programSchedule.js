@@ -3,7 +3,7 @@ export const schedule = [
     [
         { time: '09:00 - 10:00', event: 'Registration', speaker: '', chair: '', type: 'misc' },
         { time: '10:00 - 10:45', event: 'Inauguration', speaker: '', chair: '', type: 'misc' },
-        { time: '10:45 - 11:45', event: 'Some Recent Issues in Cryptology', speaker: 'Bimal Kumar Roy', chair: 'Prof. Dipanwita Roy Chowdhury', type: 'talk' },
+        { time: '10:45 - 11:45', event: 'Some Recent Issues in Cryptology (Virtual Mode)', speaker: 'Bimal Kumar Roy', chair: 'Prof. Dipanwita Roy Chowdhury', type: 'talk' },
         { time: '11:45 - 12:00', event: 'High Tea', speaker: '', chair: '', type: 'snacks' },
         { time: '12:00 - 13:00', event: 'Introduction to Differential Cryptanalysis', speaker: 'Dipanwita Roy Chowdhury', chair: 'Prof. Souradyuti Paul', type: 'talk' },
         { time: '13:00 - 14:30', event: 'Lunch', speaker: '', chair: '', type: 'lunch' },
