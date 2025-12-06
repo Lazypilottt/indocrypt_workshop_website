@@ -7,13 +7,11 @@ import { schedule } from '../data/programSchedule';
 
 const getTypeIcon = (type) => {
   const colorMap = {
-    nwc: 'bg-green-500',
-    lunch: 'bg-yellow-500',
     misc: 'bg-orange-500',
+    talk: 'bg-red-500',
+    lunch: 'bg-yellow-500',
     snacks: 'bg-blue-500',
-    groupd: 'bg-purple-500',
-    talk: 'bg-pink-500',
-    groupp: 'bg-red-500',
+    nwc: 'bg-green-500',
     default: 'bg-gray-400',
   };
   const color = colorMap[type] || colorMap.default;
