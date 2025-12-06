@@ -7,7 +7,7 @@ import { schedule } from '../data/programSchedule';
 
 const getTypeIcon = (type) => {
   const colorMap = {
-    misc: 'bg-orange-500',
+    misc: 'bg-pink-500',
     talk: 'bg-red-500',
     lunch: 'bg-yellow-500',
     snacks: 'bg-blue-500',
