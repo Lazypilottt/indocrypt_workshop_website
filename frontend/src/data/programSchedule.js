@@ -29,14 +29,16 @@ export const schedule = [
     ],
     // Dec 09
     [
-        { time: '09:30 - 10:30', event: 'Exploring Application of Machine Learning in Cryptology', speaker: 'Dr Girish Mishra', chair: 'Dr Avik Chakraborti', type: 'talk' },
-        { time: '10:30 - 11:30', event: 'Unclonability in Cryptography: Quantum Credentials', speaker: 'Dr M. Prem Laxman Das', chair: 'Dr Avik Chakraborti', type: 'talk' },
-        { time: '11:30 - 11:50', event: 'Morning Tea', speaker: '', chair: '', type: 'snacks' },
-        { time: '11:50 - 12:50', event: 'Quantum Key Distribution', speaker: 'Prof. Goutam Kumar Paul', chair: 'Dr M. Prem Laxman Das', type: 'talk' },
-        { time: '12:50 - 13:45', event: 'Panel Discussion', speaker: '', chair: '', type: 'misc' },
-        { time: '13:45 - 14:00', event: 'Valedictory Session', speaker: '', chair: '', type: 'misc' },
-        { time: '14:00 - 15:00', event: 'Lunch', speaker: '', chair: '', type: 'lunch' },
-        { time: '15:00 - 18:30', event: 'CWS 2025', speaker: '', chair: '', type: 'nwc' },
+        { time: '09:30 - 10:20', event: 'Exploring Application of Machine Learning in Cryptology', speaker: 'Dr Girish Mishra', chair: 'Dr Avik Chakraborti', type: 'talk' },
+        { time: '10:20 - 11:10', event: 'Quantum Key Distribution', speaker: 'Prof. Goutam Kumar Paul', chair: 'Dr M. Prem Laxman Das', type: 'talk' },
+        { time: '11:10 - 11:20', event: 'Morning Tea', speaker: '', chair: '', type: 'snacks' },
+        { time: '11:20 - 12:10', event: 'Unclonability in Cryptography: Quantum Credentials', speaker: 'Dr M. Prem Laxman Das', chair: 'Dr Avik Chakraborti', type: 'talk' },
+        { time: '12:10 - 12:40', event: 'Panel Discussion', speaker: '', chair: '', type: 'misc' },
+        { time: '12:40 - 12:50', event: 'Best Poster Award', speaker: '', chair: '', type: 'misc' },
+        { time: '12:50 - 13:00', event: 'Valedictory Session', speaker: '', chair: '', type: 'misc' },
+        { time: '13:00 - 13:10', event: 'Workshop Group Photo', speaker: '', chair: '', type: 'misc' },
+        { time: '13:10 - 14:30', event: 'Lunch', speaker: '', chair: '', type: 'lunch' },
+        { time: '14:30 - 18:00', event: 'CWS 2025', speaker: '', chair: '', type: 'cws' },
     ],
 ];
 

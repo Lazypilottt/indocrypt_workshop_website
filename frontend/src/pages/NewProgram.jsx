@@ -11,7 +11,7 @@ const getTypeIcon = (type) => {
     talk: 'bg-red-500',
     lunch: 'bg-yellow-500',
     snacks: 'bg-blue-500',
-    nwc: 'bg-green-500',
+    cws: 'bg-green-500',
     default: 'bg-gray-400',
   };
   const color = colorMap[type] || colorMap.default;
