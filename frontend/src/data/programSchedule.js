@@ -44,7 +44,8 @@ export const getCurrentEvent = () => {
     const now = new Date();
     const year = 2025;
     const month = 11; // December is month 11 (0-indexed)
-    const days = [7, 8, 9];
+    // const days = [7, 8, 9];
+    const days = [6, 7, 8];
     // const days = [4, 5, 6];
 
     // For testing purposes, if the current date is not in the range, we can mock it or return null.
@@ -100,4 +101,15 @@ export const getCurrentEvent = () => {
     }
 
     return null;
+};
+
+export const isEventConcluded = () => {
+    const now = new Date();
+    const year = 2025;
+    const month = 11; // December is month 11 (0-indexed)
+
+    // The last event ends on Dec 9th at 18:30
+    const lastEventEnd = new Date(year, month, 8, 18, 30);
+
+    return now > lastEventEnd;
 };

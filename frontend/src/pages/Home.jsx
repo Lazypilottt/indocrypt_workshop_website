@@ -24,13 +24,14 @@ import gm from "../../assets/speakers/gm.jpeg"; // New import
 import nc from "../../assets/speakers/nc.jpeg"; // New import
 import rsr from "../../assets/speakers/rsr.jpeg"; // New import
 
-import { getCurrentEvent } from "../data/programSchedule";
+import { getCurrentEvent, isEventConcluded } from "../data/programSchedule";
 import { useState } from "react";
 
 const Home = () => {
   const navigate = useNavigate();
   const [isLive, setIsLive] = useState(false);
   const [currentEvent, setCurrentEvent] = useState(null);
+  const [isConcluded, setIsConcluded] = useState(false);
 
   useEffect(() => {
     AOS.init({
@@ -41,24 +42,36 @@ const Home = () => {
       disable: window.innerWidth < 768
     });
 
-    // Check initially if we should be live
-    const event = getCurrentEvent();
-    if (event) {
-      setIsLive(true);
-      setCurrentEvent(event);
+    // Check if the event has concluded
+    if (isEventConcluded()) {
+      setIsConcluded(true);
+      setIsLive(true); // Keep isLive true so countdown doesn't show
+    } else {
+      // Check initially if we should be live
+      const event = getCurrentEvent();
+      if (event) {
+        setIsLive(true);
+        setCurrentEvent(event);
+      }
     }
 
     // Set up an interval to update the current event if we are live
     let interval;
-    if (isLive) {
+    if (isLive && !isConcluded) {
       interval = setInterval(() => {
-        const event = getCurrentEvent();
-        setCurrentEvent(event);
-      }, 3000); // Check every minute
+        // Check if concluded
+        if (isEventConcluded()) {
+          setIsConcluded(true);
+          setCurrentEvent(null);
+        } else {
+          const event = getCurrentEvent();
+          setCurrentEvent(event);
+        }
+      }, 3000); // Check every 3 seconds
     }
 
     return () => clearInterval(interval);
-  }, [isLive]);
+  }, [isLive, isConcluded]);
 
   const handleCountdownComplete = () => {
     setIsLive(true);
@@ -128,6 +141,30 @@ const Home = () => {
                   onComplete={handleCountdownComplete}
                 />
               </>
+            ) : isConcluded ? (
+              <div className="text-center animate-fade-in">
+                <div className="flex items-center justify-center gap-2 mb-4">
+                  <span className="text-3xl">🎉</span>
+                  <h2 className="text-xl sm:text-2xl font-bold text-[#7c3aed] uppercase tracking-wider">
+                    Event Concluded
+                  </h2>
+                  <span className="text-3xl">🎉</span>
+                </div>
+
+                <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 border border-[#7c3aed]/20">
+                  <h3 className="text-lg sm:text-xl font-bold text-[#2e2a30] mb-4">
+                    National Workshop on Cryptology 2025 has concluded successfully!
+                  </h3>
+                  <p className="text-sm sm:text-base text-[#2e2a30]/80 mb-4">
+                    We extend our heartfelt gratitude to everyone who made this event a grand success.
+                  </p>
+                  <div className="space-y-2 text-sm sm:text-base text-[#2e2a30]/70">
+                    <p>🙏 <strong>Thank you</strong> to all our <span className="text-[#7c3aed] font-semibold">distinguished speakers</span> for sharing their invaluable knowledge and insights.</p>
+                    <p>🙏 <strong>Thank you</strong> to all the <span className="text-[#7c3aed] font-semibold">participants</span> for your enthusiasm and active engagement.</p>
+                    <p>🙏 <strong>Thank you</strong> to the <span className="text-[#7c3aed] font-semibold">organizing committee</span> for their tireless efforts in making this event a reality.</p>
+                  </div>
+                </div>
+              </div>
             ) : (
               <div className="text-center animate-fade-in">
                 <div className="flex items-center justify-center gap-2 mb-4">
