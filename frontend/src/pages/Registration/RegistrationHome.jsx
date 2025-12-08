@@ -57,22 +57,7 @@ export default function RegistrationHome() {
                 </p>
               </div>
 
-              <div className="text-center pt-4">
-                <a
-                  href="https://forms.gle/RExqYDbqCN2fBJWE7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-12 py-4 rounded-full font-bold text-lg text-white
-                                   shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl
-                                   hover:-translate-y-1 active:scale-95"
-                  style={{ backgroundColor: '#2e2a30' }}
-                >
-                  Fill Registration Form
-                </a>
-                <p className="text-sm text-[#2e2a30]/60 italic mt-4">
-                  You will be redirected to Google Forms
-                </p>
-              </div>
+
             </div>
           </GlowingBox>
 

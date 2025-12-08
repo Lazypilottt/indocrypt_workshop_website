@@ -148,6 +148,11 @@ const Home = () => {
                     <h3 className="text-lg sm:text-xl font-bold text-[#2e2a30] mb-2">
                       {currentEvent.event}
                     </h3>
+                    {currentEvent.speaker && (
+                      <p className="text-sm text-[#2e2a30]/70">
+                        Speaker: {currentEvent.speaker}
+                      </p>
+                    )}
                     {currentEvent.chair && (
                       <p className="text-sm text-[#2e2a30]/70">
                         Session Chair: {currentEvent.chair}
@@ -165,26 +170,19 @@ const Home = () => {
             )}
           </div>
 
-          <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row justify-center gap-3">
-            <Link
-              to="/registration"
-              className="group relative px-6 py-2.5 rounded-xl bg-[#7c3aed] text-white 
-                       font-medium text-sm sm:text-base tracking-wide text-center
-                       transition-all duration-300 hover:shadow-[0_0_20px_rgba(124,58,237,0.5)]
-                       active:scale-95 overflow-hidden"
-            >
-              <span className="relative z-10">Register Now</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#7c3aed] to-[#ec4899] 
-                            opacity-0 group-hover:opacity-100 transition-opacity duration-500"/>
-            </Link>
+          <div className="mt-6 sm:mt-8 flex justify-center">
             <Link
               to="/program"
-              className="px-6 py-2.5 rounded-xl bg-white/80 text-[#2e2a30] font-medium
-                       text-sm sm:text-base tracking-wide text-center backdrop-blur-sm
-                       border border-[#7c3aed]/20 transition-all duration-300
-                       hover:border-[#7c3aed] hover:bg-white active:scale-95"
+              className="group relative px-12 py-3 rounded-xl bg-gradient-to-r from-[#7c3aed] to-[#9333ea] 
+                       text-white font-semibold text-sm sm:text-base tracking-wide text-center
+                       shadow-lg shadow-[#7c3aed]/30 transition-all duration-300
+                       hover:shadow-[0_0_30px_rgba(124,58,237,0.6)] hover:scale-105
+                       hover:from-[#8b5cf6] hover:to-[#a855f7]
+                       active:scale-95 overflow-hidden"
             >
-              View Program
+              <span className="relative z-10">View Program</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#ec4899] to-[#7c3aed] 
+                            opacity-0 group-hover:opacity-100 transition-opacity duration-500"/>
             </Link>
           </div>
         </GlowingBox>
