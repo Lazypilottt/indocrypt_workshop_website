@@ -11,7 +11,7 @@ export const schedule = [
         { time: '15:30 - 15:50', event: 'Coffee Break', speaker: '', chair: '', type: 'snacks' },
         { time: '15:50 - 16:50', event: 'Zero Knowledge Proof and its Application (Virtual Mode)', speaker: 'Dr Avijit Dutta', chair: 'Dr Souradyuti Paul', type: 'talk' },
         { time: '16:50 - 17:10', event: 'High Tea', speaker: '', chair: '', type: 'snacks' },
-        { time: '17:10 - 18:00', event: 'Lightning Talks', speaker: '', chair: '', type: 'misc' },
+        { time: '17:10 - 18:00', event: 'Lightning Talks', speaker: 'Selected Students', chair: 'Dr Shibam Ghosh', type: 'misc' },
     ],
     // Dec 08
     [
@@ -30,7 +30,7 @@ export const schedule = [
     // Dec 09
     [
         { time: '09:30 - 10:20', event: 'Exploring Application of Machine Learning in Cryptology', speaker: 'Dr Girish Mishra', chair: 'Dr Avik Chakraborti', type: 'talk' },
-        { time: '10:20 - 11:10', event: 'Quantum Key Distribution', speaker: 'Prof. Goutam Kumar Paul', chair: 'Dr M. Prem Laxman Das', type: 'talk' },
+        { time: '10:20 - 11:10', event: 'Quantum Key Distribution: from a Classical Cryptographer\'s View (Virtual Mode)', speaker: 'Prof. Goutam Kumar Paul', chair: 'Dr Avik Chakraborti', type: 'talk' },
         { time: '11:10 - 11:20', event: 'Morning Tea', speaker: '', chair: '', type: 'snacks' },
         { time: '11:20 - 12:10', event: 'Unclonability in Cryptography: Quantum Credentials', speaker: 'Dr M. Prem Laxman Das', chair: 'Dr Avik Chakraborti', type: 'talk' },
         { time: '12:10 - 12:40', event: 'Panel Discussion', speaker: '', chair: '', type: 'misc' },
